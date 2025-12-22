@@ -8,71 +8,80 @@ A high-end software architecture firm's portfolio and lead-capture website. Buil
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS v4 + clsx + tailwind-merge
 - **Typography:** Cinzel (header logo) + Playfair Display (headings) + Inter (body)
-- **Animation:** Framer Motion + canvas-confetti
+- **Animation:** Framer Motion (Spring Physics: stiffness 300, damping 30, mass 0.8)
+- **Form Capture:** Tally.so (Popup Integration)
 - **Smooth Scroll:** Lenis
 - **Icons:** Lucide React
+- **Success:** canvas-confetti
 
 ## Project Structure
 ```
 src/
 ├── app/
-│   ├── layout.tsx         # Root layout with fonts, LenisProvider, OG meta tags
-│   ├── page.tsx           # Landing page with all sections
-│   ├── globals.css        # Tailwind imports, custom scrollbar, Rich Black theme
+│   ├── layout.tsx         # Root layout with fonts, LenisProvider, Tally script
+│   ├── page.tsx           # Landing page with Tally integration
+│   ├── globals.css        # Tailwind imports, gold selection, Rich Black theme
 │   ├── not-found.tsx      # Custom 404 page with Digital Noir styling
-│   ├── api/leads/route.ts # Lead submission API
 │   ├── success/page.tsx   # Success page with confetti
 │   └── legal/
 │       ├── privacy/page.tsx
 │       └── terms/page.tsx
 ├── components/
-│   ├── ui/                # Atoms (Button, Modal, Toast, DisclaimerBanner)
-│   ├── sections/          # Page sections (Hero, Services, Portfolio, Process, Pricing, ContactModal)
+│   ├── ui/                # Atoms (Button, Toast, DisclaimerBanner)
+│   ├── sections/          # Hero, About, Services, Portfolio, Process, Pricing
 │   ├── layout/            # Navbar and Footer
 │   └── providers/         # LenisProvider for smooth scrolling
 ├── lib/
-│   ├── utils.ts           # cn() helper and SPRING_PHYSICS animation config
-│   └── constants.ts       # Content: portfolio (5 projects), pricing (4 tiers with retainers), process steps
+│   ├── utils.ts           # cn() helper and SPRING_PHYSICS config
+│   ├── constants.ts       # Content: commanders, portfolio, pricing, process
+│   └── tally.ts           # Tally popup configuration
 └── types/
-    └── index.ts           # TypeScript interfaces
-public/
-├── sitemap.xml            # SEO sitemap (allows all crawlers)
-├── robots.txt             # SEO robots file
-└── og-image.svg           # OpenGraph social image
+    ├── index.ts           # TypeScript interfaces
+    └── tally.d.ts         # Tally global type declarations
 ```
 
 ## Key Features
+
+### The Commanders (About Section)
+- **Ethan Johnson** (Managing Partner | Operations): "My 'Red Pill' moment happened at 19..."
+- **Brody Bailey** (Lead Architect | Engineering): "Code without structure is flying blind..."
+
+### Portfolio (The Asset Vault)
+- SmartHVAC Analytics: 92,000 Lines of Code, $720,000 Asset Valuation
+- Metro-Barber-OS: Native Voice Receptionist Integration, Zero No-Shows
+- Hometown Rock & Landscape: 30+ Proprietary Material Calculators
+- All Care Drain: 98/100 SEO Score, Speed Run (12 Days)
+- Acts Heat & Air: Integrated Financing (Synchrony API) & Schedule Sync
+
+### Pricing Tiers
+1. **The AI Receptionist** ($3,500) - Usage-Based Retainer
+2. **The Digital Storefront / Recovery** ($5,000) - $150/mo Hosting & Security
+3. **The Business Engine** ($15,000) - Custom SLA, Voice Receptionist, ROI Dashboard (RECOMMENDED)
+4. **The SaaS Core** ($45,000+) - Enterprise Support Agreement
+
+### Technical Features
 - Hero section with "We Build Systems. Not Websites." tagline
-- Portfolio grid with 5 real projects:
-  - SmartHVAC Analytics ($720,000 Asset Valuation)
-  - Metro-Barber-OS (Zero No-Shows)
-  - Hometown Rock & Landscape (30+ Material Calculators)
-  - Acts Heat & Air (Integrated Financing & Scheduling)
-  - All Care Drain (98/100 SEO Score)
 - Process section: Audit -> Blueprint -> Build -> Asset
-- 4 pricing tiers with retainer info:
-  - AI Receptionist ($3,500) - Usage-Based Retainer
-  - Recovery Sprint ($5,000) - $150/mo Hosting
-  - Business Engine ($15,000) - Custom SLA (RECOMMENDED)
-  - SaaS Core ($45,000+) - Enterprise Support
-- Multi-step contact modal with redirect to success page
-- Success page with animated checkmark and confetti explosion
-- Custom 404 page with Digital Noir styling
+- Tally.so popup for lead capture (Form ID: 3xjo7o)
+- Gold selection color (#d4af37)
+- Custom 4px scrollbar (zinc theme)
+- All CTAs standardized to "Start Asset Audit"
+- Mobile navigation with swipe gestures and auto-close
 - Section 179 disclaimer in pricing and footer
-- Custom scrollbar (4px, zinc-700 thumb)
-- Smooth scrolling via Lenis
-- Mobile navigation with swipe gestures
 - SEO-ready with sitemap.xml, robots.txt, OG meta tags
 
 ## Build Configuration
-- `typescript.ignoreBuildErrors: true` - Prevents build failures
-- `eslint.ignoreDuringBuilds: true` - Prevents lint blocking deployments
-- Cache-Control headers disabled for development
+- `typescript.ignoreBuildErrors: true`
+- `eslint.ignoreDuringBuilds: true`
+- Tally script loaded via next/script with lazyOnload strategy
+- Tally loading guard with polling and retry logic
 
 ## Brand Guidelines
-- Background: Rich Black (#050505) - NOT pure black
+- Background: Rich Black (#050505)
+- Selection: Gold (#d4af37)
 - Logo: "VERUTHIA" (Cinzel font) in header, "Veruthia Consulting, LLC" in footer
 - Featured pricing card: Black background with zinc border + "RECOMMENDED" badge
+- Touch targets: min-height 44px
 
 ## Running the Project
 ```bash
@@ -81,15 +90,17 @@ npm run build  # Production build
 npm run start  # Production server on port 5000
 ```
 
+## Documentation
+- **ATOMIC_SPEC.md**: 35-point Definition of Done
+- **PRD.md**: Product Requirements with commander bios
+
 ## Recent Changes
-- 2024-12-22: OMEGA Synchronization complete - all 5 dimensions applied
-- 2024-12-22: Added Cinzel font for header logo
-- 2024-12-22: Changed all backgrounds from #000000 to Rich Black (#050505)
-- 2024-12-22: Added custom scrollbar styling (4px, zinc theme)
-- 2024-12-22: Updated SmartHVAC to $720,000 Asset Valuation
-- 2024-12-22: Added retainer pricing info to all tiers
-- 2024-12-22: Added Process section (Audit -> Blueprint -> Build -> Asset)
-- 2024-12-22: Added 2 portfolio items (Acts Heat & Air, All Care Drain)
-- 2024-12-22: Created custom not-found.tsx page
-- 2024-12-22: Added OG image and Twitter card meta tags
-- 2024-12-22: Updated featured pricing card styling (black bg, zinc border)
+- 2024-12-22: OMEGA Synthesis v2 complete - all 35 points applied
+- 2024-12-22: Added Tally.so popup integration (replaced custom contact modal)
+- 2024-12-22: Added About section with commander bios (Ethan & Brody)
+- 2024-12-22: Updated portfolio with technical metrics
+- 2024-12-22: Renamed Tier 2 to "Digital Storefront / Recovery"
+- 2024-12-22: Added Voice Receptionist and ROI Dashboard to Tier 3
+- 2024-12-22: All CTAs now read "Start Asset Audit"
+- 2024-12-22: Added gold selection color (#d4af37)
+- 2024-12-22: Added Tally loading guard with polling logic
