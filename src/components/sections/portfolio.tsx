@@ -1,18 +1,46 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Lock, Code, BarChart3, TrendingUp, Zap } from "lucide-react";
 import { PORTFOLIO_ITEMS } from "@/lib/constants";
-import { SPRING_PHYSICS, cn } from "@/lib/utils";
+import { cn } from "@/lib/utils";
+
+const iconMap: Record<string, React.ReactNode> = {
+  Lock: <Lock className="w-12 h-12" />,
+  Code: <Code className="w-12 h-12" />,
+  BarChart3: <BarChart3 className="w-12 h-12" />,
+  TrendingUp: <TrendingUp className="w-12 h-12" />,
+  Zap: <Zap className="w-12 h-12" />,
+};
+
+const headerAnimation = {
+  initial: { opacity: 0, y: 40 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] as const },
+};
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
 export default function Portfolio() {
   return (
     <section id="portfolio" className="py-24 bg-[#050505]">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={SPRING_PHYSICS}
+          {...headerAnimation}
           className="text-center mb-16"
         >
           <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4">
@@ -20,27 +48,33 @@ export default function Portfolio() {
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Software products built for real businesses. Each one a
-            tax-qualified digital asset.
+            capital digital asset.*
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {PORTFOLIO_ITEMS.map((item, index) => (
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          {PORTFOLIO_ITEMS.map((item) => (
             <motion.div
               key={item.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ ...SPRING_PHYSICS, delay: index * 0.1 }}
-              whileHover={{ scale: 1.02 }}
+              variants={itemVariants}
+              whileHover={{ scale: 1.02, boxShadow: "0 0 30px rgba(212, 175, 55, 0.1)" }}
               className={cn(
                 "relative overflow-hidden rounded-xl p-8 min-h-[320px] flex flex-col justify-end w-full max-w-full",
                 item.gradient
               )}
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/90 via-[#050505]/50 to-transparent" />
+              <div className="absolute top-6 right-6 text-white/10">
+                {iconMap[item.icon]}
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/95 via-[#050505]/60 to-transparent" />
               <div className="relative z-10">
-                <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs uppercase tracking-wide text-gray-300 mb-3">
+                <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs uppercase tracking-wide text-gray-300 mb-3 font-cinzel">
                   {item.tag}
                 </span>
                 <h3 className="font-playfair text-2xl md:text-3xl font-bold mb-2">
@@ -54,7 +88,7 @@ export default function Portfolio() {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

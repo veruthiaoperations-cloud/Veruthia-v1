@@ -3,10 +3,10 @@
 import { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import Hero from "@/components/sections/hero";
-import About from "@/components/sections/about";
 import Services from "@/components/sections/services";
 import Portfolio from "@/components/sections/portfolio";
 import Process from "@/components/sections/process";
+import About from "@/components/sections/about";
 import Pricing from "@/components/sections/pricing";
 
 export default function Home() {
@@ -69,10 +69,10 @@ export default function Home() {
   return (
     <>
       <Hero onOpenContact={handleOpenTally} />
-      <About />
       <Services />
       <Portfolio />
       <Process />
+      <About />
       <Pricing onOpenContact={handleOpenTally} />
     </>
   );

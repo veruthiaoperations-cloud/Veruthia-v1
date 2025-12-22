@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { Layout, Zap, MessageSquare } from "lucide-react";
 import { SERVICES } from "@/lib/constants";
-import { SPRING_PHYSICS } from "@/lib/utils";
 
 const iconMap: Record<string, React.ReactNode> = {
   Layout: <Layout className="w-8 h-8" />,
@@ -11,15 +10,34 @@ const iconMap: Record<string, React.ReactNode> = {
   MessageSquare: <MessageSquare className="w-8 h-8" />,
 };
 
+const headerAnimation = {
+  initial: { opacity: 0, y: 40 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] as const },
+};
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
 export default function Services() {
   return (
     <section id="services" className="py-24 bg-[#050505]">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={SPRING_PHYSICS}
+          {...headerAnimation}
           className="text-center mb-16"
         >
           <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4">
@@ -31,14 +49,17 @@ export default function Services() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {SERVICES.map((service, index) => (
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+        >
+          {SERVICES.map((service) => (
             <motion.div
               key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ ...SPRING_PHYSICS, delay: index * 0.1 }}
+              variants={itemVariants}
               whileHover={{ y: -5 }}
               className="p-8 bg-zinc-900/50 border border-white/10 rounded-lg"
             >
@@ -51,7 +72,7 @@ export default function Services() {
               <p className="text-gray-400">{service.description}</p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

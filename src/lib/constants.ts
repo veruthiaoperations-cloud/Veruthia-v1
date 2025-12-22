@@ -1,8 +1,8 @@
 export const DISCLAIMER_TEXT =
-  "Section 179 eligibility depends on your specific business situation. Please consult a certified CPA.";
+  "* Veruthia Consulting, LLC provides software architecture, not tax advice. Consult a Certified Public Accountant (CPA).";
 
 export const PRIVACY_TEXT =
-  "We collect name, email, and revenue data solely for the purpose of the Asset Audit.";
+  "We collect name, email, and revenue data solely for the purpose of the Capital Asset Architecture review.";
 
 export const TERMS_TEXT =
   "All IP rights transfer to the client upon final payment. Until then, code remains the property of Veruthia Consulting, LLC.";
@@ -28,46 +28,51 @@ export const PORTFOLIO_ITEMS = [
     name: "SmartHVAC Analytics",
     tag: "B2B SaaS",
     description: "92,000 Lines of Code. ServiceTitan Auto-Import. 10 Analysis Playbooks. Multi-Tenant Auth.",
-    gradient: "bg-gradient-to-br from-slate-900 via-blue-900 to-[#050505]",
+    gradient: "bg-gradient-to-br from-blue-950 via-slate-950 to-[#050505]",
     stats: { metric: "$720,000", label: "Asset Valuation" },
+    icon: "Lock",
   },
   {
     id: "metro-barber",
     name: "Metro-Barber-OS",
     tag: "Booking Engine",
-    description: "Custom CMS & ERP. Native Voice Receptionist Integration. Unified Dashboard. Infinite Scalability.",
-    gradient: "bg-gradient-to-br from-yellow-700 via-yellow-900 to-[#050505]",
+    description: "Custom CMS & ERP. Native Voice Receptionist Integration. Unified Ecosystem (Web + Voice + CRM). Infinite Scalability.",
+    gradient: "bg-gradient-to-br from-amber-900 via-yellow-950 to-[#050505]",
     stats: { metric: "Zero", label: "No-Shows" },
+    icon: "Code",
   },
   {
     id: "hometown",
     name: "Hometown Rock & Landscape",
     tag: "Logistics ERP",
     description: "Logistics ERP. 30+ Proprietary Material Calculators (Volume-to-Weight).",
-    gradient: "bg-gradient-to-br from-emerald-900 via-stone-800 to-[#050505]",
+    gradient: "bg-gradient-to-br from-emerald-950 via-green-950 to-[#050505]",
     stats: { metric: "30+", label: "Material Calculators" },
+    icon: "BarChart3",
   },
   {
     id: "all-care-drain",
     name: "All Care Drain",
     tag: "SEO Platform",
     description: "Speed Run (12 Days). 98/100 SEO Score. Dual-Submission Lead Capture.",
-    gradient: "bg-gradient-to-br from-cyan-900 via-teal-900 to-[#050505]",
+    gradient: "bg-gradient-to-br from-cyan-950 via-teal-950 to-[#050505]",
     stats: { metric: "98/100", label: "SEO Score" },
+    icon: "TrendingUp",
   },
   {
     id: "acts-heat-air",
     name: "Acts Heat & Air",
     tag: "Mini-SaaS",
     description: "Mini-SaaS. Integrated Financing (Synchrony API) & Schedule Sync.",
-    gradient: "bg-gradient-to-br from-orange-900 via-red-900 to-[#050505]",
+    gradient: "bg-gradient-to-br from-orange-950 via-red-950 to-[#050505]",
     stats: { metric: "Integrated", label: "Financing & Scheduling" },
+    icon: "Zap",
   },
 ];
 
 export const SERVICES = [
   {
-    title: "Web Architecture",
+    title: "Capital Asset Architecture",
     description:
       "Custom-built digital assets engineered for scale, performance, and long-term ROI.",
     icon: "Layout",
@@ -79,9 +84,9 @@ export const SERVICES = [
     icon: "Zap",
   },
   {
-    title: "Consulting",
+    title: "Digital Asset Deployment",
     description:
-      "Strategic guidance on digital transformation and Section 179 asset qualification.",
+      "Strategic implementation and deployment of enterprise-grade software systems.",
     icon: "MessageSquare",
   },
 ];
@@ -109,7 +114,7 @@ export const PROCESS_STEPS = [
     step: 4,
     title: "Asset",
     subtitle: "Deployment",
-    description: "Launch your Section 179 eligible digital asset with full IP transfer.",
+    description: "Launch your capital digital asset with full IP transfer.*",
   },
 ];
 
@@ -153,10 +158,10 @@ export const PRICING_TIERS = [
       "Custom ERP system",
       "Inventory management",
       "Native Voice Receptionist Integration",
-      "Unified ROI Dashboard (Web + Voice + CRM)",
+      "Unified Ecosystem (Web + Voice + CRM)",
       "Bilingual interface",
       "90-day support",
-      "Full IP transfer",
+      "Full IP transfer*",
     ],
     cta: "Start Asset Audit",
     featured: true,

@@ -3,22 +3,41 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { PRICING_TIERS, DISCLAIMER_TEXT } from "@/lib/constants";
-import { SPRING_PHYSICS, cn } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import Button from "@/components/ui/button";
 
 interface PricingProps {
   onOpenContact: () => void;
 }
 
+const headerAnimation = {
+  initial: { opacity: 0, y: 40 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] as const },
+};
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
 export default function Pricing({ onOpenContact }: PricingProps) {
   return (
     <section id="pricing" className="py-24 bg-[#050505]">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={SPRING_PHYSICS}
+          {...headerAnimation}
           className="text-center mb-16"
         >
           <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4">
@@ -29,14 +48,17 @@ export default function Pricing({ onOpenContact }: PricingProps) {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {PRICING_TIERS.map((tier, index) => (
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
+          {PRICING_TIERS.map((tier) => (
             <motion.div
               key={tier.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ ...SPRING_PHYSICS, delay: index * 0.1 }}
+              variants={itemVariants}
               whileHover={{ y: -5 }}
               className={cn(
                 "relative p-6 rounded-xl border flex flex-col w-full max-w-full",
@@ -47,7 +69,7 @@ export default function Pricing({ onOpenContact }: PricingProps) {
             >
               {tier.featured && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="bg-zinc-700 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">
+                  <span className="bg-zinc-700 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide font-cinzel">
                     Recommended
                   </span>
                 </div>
@@ -86,7 +108,7 @@ export default function Pricing({ onOpenContact }: PricingProps) {
               </Button>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}

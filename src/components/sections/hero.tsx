@@ -3,11 +3,22 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Button from "@/components/ui/button";
-import { SPRING_PHYSICS } from "@/lib/utils";
 
 interface HeroProps {
   onOpenContact: () => void;
 }
+
+const headerAnimation = {
+  initial: { opacity: 0, y: 40 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] as const },
+};
+
+const bodyAnimation = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const },
+};
 
 export default function Hero({ onOpenContact }: HeroProps) {
   return (
@@ -17,18 +28,18 @@ export default function Hero({ onOpenContact }: HeroProps) {
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ ...SPRING_PHYSICS, delay: 0.1 }}
-          className="text-gray-400 uppercase tracking-widest text-sm mb-6"
+          initial={bodyAnimation.initial}
+          animate={bodyAnimation.animate}
+          transition={{ ...bodyAnimation.transition, delay: 0.1 }}
+          className="text-gray-400 uppercase tracking-widest text-sm mb-6 font-cinzel"
         >
           Digital Asset Architecture
         </motion.p>
 
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ ...SPRING_PHYSICS, delay: 0.2 }}
+          initial={headerAnimation.initial}
+          animate={headerAnimation.animate}
+          transition={{ ...headerAnimation.transition, delay: 0.2 }}
           className="font-playfair text-5xl md:text-7xl font-bold leading-tight mb-8"
         >
           We Build Systems.
@@ -37,19 +48,19 @@ export default function Hero({ onOpenContact }: HeroProps) {
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ ...SPRING_PHYSICS, delay: 0.3 }}
+          initial={bodyAnimation.initial}
+          animate={bodyAnimation.animate}
+          transition={{ ...bodyAnimation.transition, delay: 0.3 }}
           className="text-xl text-gray-400 max-w-2xl mx-auto mb-12"
         >
-          Transform your manual operations into tax-qualified digital assets.
-          Section 179 eligible. Built for ROI.
+          Transform your manual operations into capital digital assets.
+          Built for ROI. Built for scale.
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ ...SPRING_PHYSICS, delay: 0.4 }}
+          initial={bodyAnimation.initial}
+          animate={bodyAnimation.animate}
+          transition={{ ...bodyAnimation.transition, delay: 0.4 }}
         >
           <Button onClick={onOpenContact} size="lg">
             Start Asset Audit
