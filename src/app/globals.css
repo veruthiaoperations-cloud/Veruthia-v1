@@ -2,8 +2,9 @@
 
 :root {
   --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 0, 0;
-  --background-end-rgb: 0, 0, 0;
+  --background-start-rgb: 5, 5, 5;
+  --background-end-rgb: 5, 5, 5;
+  --rich-black: #050505;
 }
 
 html {
@@ -32,9 +33,31 @@ html.lenis, html.lenis body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #000000;
+  background: var(--rich-black);
   overscroll-behavior: none;
   -webkit-overflow-scrolling: touch;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #52525b;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #71717a;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #52525b #050505;
 }
 
 ::selection {

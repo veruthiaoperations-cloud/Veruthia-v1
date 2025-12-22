@@ -6,7 +6,7 @@ import { SPRING_PHYSICS, cn } from "@/lib/utils";
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-24 bg-black">
+    <section id="portfolio" className="py-24 bg-[#050505]">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -24,7 +24,7 @@ export default function Portfolio() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {PORTFOLIO_ITEMS.map((item, index) => (
             <motion.div
               key={item.id}
@@ -38,7 +38,7 @@ export default function Portfolio() {
                 item.gradient
               )}
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/90 via-[#050505]/50 to-transparent" />
               <div className="relative z-10">
                 <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs uppercase tracking-wide text-gray-300 mb-3">
                   {item.tag}

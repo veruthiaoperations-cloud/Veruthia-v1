@@ -13,7 +13,7 @@ const iconMap: Record<string, React.ReactNode> = {
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-black">
+    <section id="services" className="py-24 bg-[#050505]">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ ...SPRING_PHYSICS, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              className="p-8 bg-gray-900/50 border border-white/10 rounded-lg"
+              className="p-8 bg-zinc-900/50 border border-white/10 rounded-lg"
             >
               <div className="w-16 h-16 bg-white/5 rounded-lg flex items-center justify-center mb-6 text-white">
                 {iconMap[service.icon]}

@@ -2,7 +2,7 @@ import { TERMS_TEXT } from "@/lib/constants";
 
 export default function TermsPage() {
   return (
-    <div className="min-h-screen bg-black pt-24 pb-16">
+    <div className="min-h-screen bg-[#050505] pt-24 pb-16">
       <div className="max-w-3xl mx-auto px-6">
         <h1 className="font-playfair text-4xl font-bold mb-8">
           Terms of Service

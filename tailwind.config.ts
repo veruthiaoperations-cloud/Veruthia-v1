@@ -11,6 +11,10 @@ const config: Config = {
       fontFamily: {
         playfair: ["var(--font-playfair)", "serif"],
         inter: ["var(--font-inter)", "sans-serif"],
+        cinzel: ["var(--font-cinzel)", "serif"],
+      },
+      colors: {
+        "rich-black": "#050505",
       },
     },
   },

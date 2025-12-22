@@ -32,12 +32,12 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={SPRING_PHYSICS}
-        className="fixed top-0 left-0 right-0 z-40 bg-black/80 backdrop-blur-md border-b border-white/10"
+        className="fixed top-0 left-0 right-0 z-40 bg-[#050505]/80 backdrop-blur-md border-b border-white/10"
       >
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="font-playfair text-2xl font-bold">
-              Veruthia
+            <Link href="/" className="font-cinzel text-2xl font-bold tracking-wider">
+              VERUTHIA
             </Link>
 
             <div className="hidden md:flex items-center gap-8">
@@ -73,7 +73,7 @@ export default function Navbar() {
             dragConstraints={{ left: -200, right: 0 }}
             onDragEnd={handleDragEnd}
             style={{ x, opacity }}
-            className="fixed inset-y-0 left-0 w-64 bg-gray-900 border-r border-white/10 z-50 md:hidden"
+            className="fixed inset-y-0 left-0 w-64 bg-zinc-900 border-r border-white/10 z-50 md:hidden"
           >
             <div className="p-6 pt-20">
               <div className="flex flex-col gap-6">

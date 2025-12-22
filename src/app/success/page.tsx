@@ -47,7 +47,7 @@ export default function SuccessPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center px-6">
+    <div className="min-h-screen bg-[#050505] flex items-center justify-center px-6">
       <div className="text-center max-w-xl">
         <motion.div
           initial={{ scale: 0, opacity: 0 }}

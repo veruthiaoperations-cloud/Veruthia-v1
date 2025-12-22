@@ -12,7 +12,7 @@ interface HeroProps {
 export default function Hero({ onOpenContact }: HeroProps) {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#050505] via-zinc-900 to-[#050505]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.03)_0%,_transparent_70%)]" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">

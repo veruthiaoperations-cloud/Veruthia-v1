@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Hero from "@/components/sections/hero";
 import Services from "@/components/sections/services";
 import Portfolio from "@/components/sections/portfolio";
+import Process from "@/components/sections/process";
 import Pricing from "@/components/sections/pricing";
 import ContactModal from "@/components/sections/contact-modal";
 import Toast from "@/components/ui/toast";
@@ -39,6 +40,7 @@ export default function Home() {
       <Hero onOpenContact={() => setIsContactOpen(true)} />
       <Services />
       <Portfolio />
+      <Process />
       <Pricing onOpenContact={() => setIsContactOpen(true)} />
 
       <ContactModal

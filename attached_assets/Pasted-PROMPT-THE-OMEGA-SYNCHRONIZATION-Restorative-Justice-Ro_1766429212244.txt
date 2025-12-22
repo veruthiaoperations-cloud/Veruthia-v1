@@ -1,0 +1,111 @@
+PROMPT: THE "OMEGA" SYNCHRONIZATION (Restorative Justice)
+Role: You are Marcus, Lead Architect. Current Status: FULL AUDIT & LOCKDOWN. Context: We are correcting "Scope Drift" from the Night Shift. You must re-calibrate the entire build based on this TOTAL INVENTORY.
+
+YOUR MISSION: Audit the current codebase against the 5 Dimensions below. If a feature exists, refine it. If it is missing, build it. Do not deviate.
+
+DIMENSION 1: ATOMIC FAIL-SAFES (Technical Risk)
+1. The "Ghost Asset" Prevention:
+
+Action: Verify public/sitemap.xml and public/robots.txt exist. They must allow all crawlers.
+
+Why: Without this, the site is not a "placed in service" asset for Section 179.
+
+2. The "Build Failure" Prevention:
+
+Action: Update next.config.js. Set typescript: { ignoreBuildErrors: true } and eslint: { ignoreDuringBuilds: true }.
+
+Why: We cannot let a minor syntax error stop the deployment.
+
+3. The "Tally Dead End" Prevention:
+
+Action: In the Contact Form, ensure the onSubmit event waits 2000ms and then executes router.push('/success'). Do NOT show the default Tally "Thank You" screen.
+
+4. The "404 Void" Prevention:
+
+Action: Create a custom not-found.tsx page. Style it with the "Digital Noir" theme (Rich Black background).
+
+5. The "FOUT" Prevention:
+
+Action: Configure next/font to preload Playfair Display and Cinzel. Prevent "flash of unstyled text."
+
+DIMENSION 2: THE PHYSICS ENGINE (The "App" Feel)
+1. Mobile Physics:
+
+Action: Apply overscroll-behavior: none to the body CSS. Kill the iOS "rubber band" effect.
+
+Action: Ensure Lenis (smooth scroll) is active. The scroll must feel weighted.
+
+2. Scrollbar Hygiene:
+
+Action: Hide the default browser scrollbar. Implement a custom CSS scrollbar:
+
+Width: 4px
+
+Track: #050505 (Rich Black)
+
+Thumb: zinc-700 (Dark Grey)
+
+DIMENSION 3: THE TRUTH PROTOCOL (Content & Integrity)
+1. Purge False Claims (Strict):
+
+Target: SmartHVAC Analytics.
+
+Fix: Remove "$100k Processed." REPLACE with: "Asset Valuation: $720,000 (Replacement Cost)."
+
+Reason: We only use verified Technical Audit metrics.
+
+2. Safe Retainer Logic (Update Pricing Cards):
+
+Tier 1 (AI Voice): Subtext: "Retainer: Usage-Based (Call Volume)".
+
+Tier 2 (Recovery): Subtext: "$150/mo Hosting & Security Only".
+
+Tier 3 (Business Engine): Subtext: "Custom SLA & Maintenance Package".
+
+3. The Full Portfolio (Add Missing Projects):
+
+Asset 1: SmartHVAC Analytics (SaaS) - $720k Asset Valuation.
+
+Asset 2: Metro-Barber-OS (Booking) - Zero No-Shows / Commission Logic.
+
+Asset 3: Hometown Rock (Logistics) - 30+ Material Calculators.
+
+Asset 4: Acts Heat & Air (Mini-SaaS) - Integrated Financing & Scheduling.
+
+Asset 5: All Care Drain (SEO) - 98/100 SEO Score / Lead Capture.
+
+4. The Process:
+
+Add a section: 1. Audit (Discovery) -> 2. Blueprint (Strategy) -> 3. Build (Architecture) -> 4. Asset (Deployment).
+
+DIMENSION 4: VISUAL PHYSICS (Brand Strictness)
+1. Color Theory:
+
+Action: Change all #000000 backgrounds to Rich Black (#050505).
+
+2. The "White Card" Ban:
+
+Target: The Featured Pricing Card (Business Engine).
+
+Action: Make the background BLACK (#050505). Give it a 1px Gold/Zinc Border. Add a "RECOMMENDED" badge. No white backgrounds.
+
+3. Logo Logic:
+
+Header: "VERUTHIA" (Cinzel/Playfair mix). NO "LLC".
+
+Footer/Legal: "Veruthia Consulting, LLC."
+
+4. Social Credibility:
+
+Action: Hardcode og:image and twitter:card tags in layout.tsx. Use a placeholder image from /public.
+
+DIMENSION 5: THE LEGAL SHIELD
+1. Section 179 Disclaimer:
+
+Action: Add this text explicitly under the Pricing Grid and in the Footer: "Section 179 eligibility depends on your specific business situation. Please consult a certified CPA."
+
+2. Legal Pages:
+
+Action: Verify /legal/privacy and /legal/terms contain actual boilerplate text. Do not leave them empty.
+
+EXECUTION: Audit the current build. Apply these fixes. GO.
