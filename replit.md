@@ -7,8 +7,8 @@ A high-end software architecture firm's portfolio and lead-capture website. Buil
 - **Framework:** Next.js 14 (App Router)
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS v4 + clsx + tailwind-merge
-- **Typography:** Cinzel (header logo) + Playfair Display (headings) + Inter (body)
-- **Animation:** Framer Motion (Spring Physics: stiffness 300, damping 30, mass 0.8)
+- **Typography:** Cinzel (accents) + Playfair Display (headings) + Inter (body)
+- **Animation:** Framer Motion (Heavy-to-Light Physics)
 - **Form Capture:** Tally.so (Popup Integration)
 - **Smooth Scroll:** Lenis
 - **Icons:** Lucide React
@@ -19,7 +19,7 @@ A high-end software architecture firm's portfolio and lead-capture website. Buil
 src/
 ├── app/
 │   ├── layout.tsx         # Root layout with fonts, LenisProvider, Tally script
-│   ├── page.tsx           # Landing page with Tally integration
+│   ├── page.tsx           # Landing page with section flow
 │   ├── globals.css        # Tailwind imports, gold selection, Rich Black theme
 │   ├── not-found.tsx      # Custom 404 page with Digital Noir styling
 │   ├── success/page.tsx   # Success page with confetti
@@ -28,11 +28,11 @@ src/
 │       └── terms/page.tsx
 ├── components/
 │   ├── ui/                # Atoms (Button, Toast, DisclaimerBanner)
-│   ├── sections/          # Hero, About, Services, Portfolio, Process, Pricing
+│   ├── sections/          # Hero, Services, Portfolio, Process, About, Pricing
 │   ├── layout/            # Navbar and Footer
 │   └── providers/         # LenisProvider for smooth scrolling
 ├── lib/
-│   ├── utils.ts           # cn() helper and SPRING_PHYSICS config
+│   ├── utils.ts           # cn() + Animation configs (HEADER/BODY_ANIMATION)
 │   ├── constants.ts       # Content: commanders, portfolio, pricing, process
 │   └── tally.ts           # Tally popup configuration
 └── types/
@@ -40,35 +40,47 @@ src/
     └── tally.d.ts         # Tally global type declarations
 ```
 
+## Page Flow (Conversion Physics)
+1. Hero ("We Build Systems")
+2. Services ("What We Build")
+3. Portfolio ("The Portfolio Array")
+4. Process ("The Process")
+5. About ("The Commanders")
+6. Pricing ("Investment Tiers")
+7. Footer
+
+## Animation System (Heavy-to-Light Physics)
+- **Headers (Playfair):** y: 40, duration: 0.8 (Slow/Heavy)
+- **Body/Buttons:** y: 20, duration: 0.5 (Fast/Snap)
+- **Stagger:** staggerChildren: 0.2 on all grids
+- **Easing:** Cubic bezier [0.25, 0.1, 0.25, 1]
+
 ## Key Features
 
 ### The Commanders (About Section)
-- **Ethan Johnson** (Managing Partner | Operations): "My 'Red Pill' moment happened at 19..."
-- **Brody Bailey** (Lead Architect | Engineering): "Code without structure is flying blind..."
+- **Ethan Johnson** (Managing Partner | Operations)
+- **Brody Bailey** (Lead Architect | Engineering)
 
-### Portfolio (The Asset Vault)
-- SmartHVAC Analytics: 92,000 Lines of Code, $720,000 Asset Valuation
-- Metro-Barber-OS: Native Voice Receptionist Integration, Zero No-Shows
-- Hometown Rock & Landscape: 30+ Proprietary Material Calculators
-- All Care Drain: 98/100 SEO Score, Speed Run (12 Days)
-- Acts Heat & Air: Integrated Financing (Synchrony API) & Schedule Sync
+### Portfolio (Deep Glass Gradients + System Icons)
+- SmartHVAC Analytics: Deep Navy to Black + Lock icon
+- Metro-Barber-OS: Deep Gold/Bronze to Black + Code icon + Unified Ecosystem
+- Hometown Rock & Landscape: Deep Forest to Black + BarChart3 icon
+- All Care Drain: Cyan to Black + TrendingUp icon
+- Acts Heat & Air: Orange to Black + Zap icon
 
 ### Pricing Tiers
 1. **The AI Receptionist** ($3,500) - Usage-Based Retainer
 2. **The Digital Storefront / Recovery** ($5,000) - $150/mo Hosting & Security
-3. **The Business Engine** ($15,000) - Custom SLA, Voice Receptionist, ROI Dashboard (RECOMMENDED)
+3. **The Business Engine** ($15,000) - Unified Ecosystem (Web + Voice + CRM) (RECOMMENDED)
 4. **The SaaS Core** ($45,000+) - Enterprise Support Agreement
 
 ### Technical Features
-- Hero section with "We Build Systems. Not Websites." tagline
-- Process section: Audit -> Blueprint -> Build -> Asset
+- "Capital Asset Architecture" and "Digital Asset Deployment" terminology
+- Asterisk (*) disclaimer links to visible legal text
+- All CTAs standardized to "Start Asset Audit"
 - Tally.so popup for lead capture (Form ID: 3xjo7o)
 - Gold selection color (#d4af37)
 - Custom 4px scrollbar (zinc theme)
-- All CTAs standardized to "Start Asset Audit"
-- Mobile navigation with swipe gestures and auto-close
-- Section 179 disclaimer in pricing and footer
-- SEO-ready with sitemap.xml, robots.txt, OG meta tags
 
 ## Build Configuration
 - `typescript.ignoreBuildErrors: true`
@@ -95,12 +107,9 @@ npm run start  # Production server on port 5000
 - **PRD.md**: Product Requirements with commander bios
 
 ## Recent Changes
-- 2024-12-22: OMEGA Synthesis v2 complete - all 35 points applied
-- 2024-12-22: Added Tally.so popup integration (replaced custom contact modal)
-- 2024-12-22: Added About section with commander bios (Ethan & Brody)
-- 2024-12-22: Updated portfolio with technical metrics
-- 2024-12-22: Renamed Tier 2 to "Digital Storefront / Recovery"
-- 2024-12-22: Added Voice Receptionist and ROI Dashboard to Tier 3
-- 2024-12-22: All CTAs now read "Start Asset Audit"
-- 2024-12-22: Added gold selection color (#d4af37)
-- 2024-12-22: Added Tally loading guard with polling logic
+- 2024-12-22: White Glove Overhaul complete - page flow reordered
+- 2024-12-22: Heavy-to-Light physics applied (Headers 0.8s, Body 0.5s)
+- 2024-12-22: Portfolio deep glass gradients with system icons
+- 2024-12-22: Legal text updated (Capital Asset Architecture, Digital Asset Deployment)
+- 2024-12-22: "Unified Ecosystem (Web + Voice + CRM)" added to Metro-Barber & Business Engine
+- 2024-12-22: Typography mix refined (Playfair headers, Cinzel accents, Inter body)

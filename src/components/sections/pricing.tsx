@@ -17,6 +17,13 @@ const headerAnimation = {
   transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] as const },
 };
 
+const bodyAnimation = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const },
+};
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -36,17 +43,20 @@ export default function Pricing({ onOpenContact }: PricingProps) {
   return (
     <section id="pricing" className="py-24 bg-[#050505]">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div
-          {...headerAnimation}
-          className="text-center mb-16"
-        >
-          <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-16">
+          <motion.h2
+            {...headerAnimation}
+            className="font-playfair text-4xl md:text-5xl font-bold mb-4"
+          >
             Investment Tiers
-          </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          </motion.h2>
+          <motion.p
+            {...bodyAnimation}
+            className="text-gray-400 max-w-2xl mx-auto"
+          >
             High-ticket positioning for high-value outcomes.
-          </p>
-        </motion.div>
+          </motion.p>
+        </div>
 
         <motion.div
           variants={containerVariants}
@@ -111,10 +121,7 @@ export default function Pricing({ onOpenContact }: PricingProps) {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5 }}
+          {...bodyAnimation}
           className="mt-12 text-center"
         >
           <p className="text-xs text-zinc-500 max-w-2xl mx-auto">
