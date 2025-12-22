@@ -7,10 +7,10 @@ import Link from "next/link";
 import { SPRING_PHYSICS } from "@/lib/utils";
 
 const navItems = [
+  { name: "About", href: "#about" },
   { name: "Services", href: "#services" },
   { name: "Portfolio", href: "#portfolio" },
   { name: "Pricing", href: "#pricing" },
-  { name: "Contact", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -24,6 +24,10 @@ export default function Navbar() {
     } else if (info.offset.x < -50) {
       setIsOpen(false);
     }
+  };
+
+  const handleLinkClick = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -54,7 +58,7 @@ export default function Navbar() {
 
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 hover:bg-white/10 rounded-md transition-colors"
+              className="md:hidden p-2 hover:bg-white/10 rounded-md transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -81,8 +85,8 @@ export default function Navbar() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    onClick={() => setIsOpen(false)}
-                    className="text-lg text-gray-300 hover:text-white transition-colors"
+                    onClick={handleLinkClick}
+                    className="text-lg text-gray-300 hover:text-white transition-colors min-h-[44px] flex items-center"
                   >
                     {item.name}
                   </Link>

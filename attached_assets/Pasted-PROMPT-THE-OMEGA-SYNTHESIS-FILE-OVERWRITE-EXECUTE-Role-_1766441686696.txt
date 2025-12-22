@@ -1,0 +1,100 @@
+PROMPT: THE OMEGA SYNTHESIS (FILE OVERWRITE & EXECUTE)
+Role: Lead Technical Architect. Status: TOTAL CONTEXT MERGE. Objective: You are to Update the Master Documentation (PRD.md and ATOMIC_SPEC.md) with the TOTAL INVENTORY below, then Audit the code to match it.
+
+PHASE 1: UPDATE THE LAWS (File Overwrite) ACTION: Rewrite ATOMIC_SPEC.md to include this 35-POINT DEFINITION OF DONE.
+
+Physics: Global Spring Config { stiffness: 300, damping: 30, mass: 0.8 }.
+
+Scroll: Mandate Lenis integration. overscroll-behavior: none on body.
+
+Touch: Mobile buttons min-height 44px. tap-highlight-color: transparent.
+
+Hover: Cards scale 1.02x with shadow-gold/10.
+
+Selection: ::selection { background: #333; color: #d4af37; }.
+
+Fonts: Preload Playfair Display & Cinzel (No FOUT).
+
+Tally API: DELETE custom contact modals. Use Tally Popup (Tally.openPopup).
+
+Tally Config: onSubmit -> Wait 2s -> Redirect to /success.
+
+Skeleton Loader: Tally container must have min-h-[600px] pulsing skeleton.
+
+Scroll Lock: Lock body scroll when Tally/Modals are open.
+
+Mobile Menu: Must auto-close on link click.
+
+Success Dopamine: Trigger canvas-confetti on /success.
+
+404: Custom not-found.tsx (Rich Black theme).
+
+CTA Text: Button must read "Start Asset Audit".
+
+LLC Rule: Header = "VERUTHIA". Footer = "Veruthia Consulting, LLC."
+
+Tax Disclaimer: "Section 179 eligibility..." text under Pricing & Footer.
+
+Ownership Logic: Copy must emphasize "Ownership" and "Assets".
+
+SEO: robots.txt allow all. sitemap.xml listing all routes.
+
+Social: Hardcoded og:image and twitter:card.
+
+Favicon: Dynamic SVG (White "V" on Black).
+
+Visuals: Background #050505 (Rich Black).
+
+No White Cards: Featured card must be BLACK with Gold Border and "RECOMMENDED" badge.
+
+Build Config: next.config.js -> typescript: { ignoreBuildErrors: true }.
+
+Remote Images: Allow remote patterns in config.
+
+Database: Prepare Supabase connection strings (Lead capture).
+
+PHASE 2: INJECT THE SOUL (Update PRD.md & Content) ACTION: Rewrite src/components/sections/about.tsx and src/lib/constants.ts with this EXACT content.
+
+1. The Commanders (Bios - Verbatim):
+
+ETHAN JOHNSON (Managing Partner | Operations):
+
+"My 'Red Pill' moment happened at 19, scraping foundations and hauling demolition debris for $12/hour. I watched contractors leave massive profits on the table because they lacked systems. I realized that selling 'hard labor' is a trap; owning Assets is the only way out. I don't sleep until the system works. My reputation is the only asset I refuse to risk."
+
+BRODY BAILEY (Lead Architect | Engineering):
+
+"Code without structure is flying blind. While others build templates, I architect Enterprise-Grade SaaS infrastructure. My rule is absolute: 'If it's not in the PRD, it doesn't exist.' I don't just write code; I build systems that scale the P&L."
+
+2. The Asset Vault (Portfolio Descriptions):
+
+SmartHVAC Analytics: "92,000 Lines of Code. ServiceTitan Auto-Import. 10 Analysis Playbooks. Multi-Tenant Auth."
+
+Metro-Barber-OS: "Custom CMS & ERP. Native Voice Receptionist Integration. Unified Dashboard. Infinite Scalability."
+
+Hometown Rock: "Logistics ERP. 30+ Proprietary Material Calculators (Volume-to-Weight)."
+
+All Care Drain: "Speed Run (12 Days). 98/100 SEO Score. Dual-Submission Lead Capture."
+
+Acts Heat & Air: "Mini-SaaS. Integrated Financing (Synchrony API) & Schedule Sync."
+
+3. The Pricing (Storefront & Voice):
+
+Tier 2 Rename: "The Digital Storefront / Recovery" ($5,000). Retainer: "$150/mo Hosting & Security".
+
+Tier 3 Update: Add "Native Voice Receptionist Integration" to features.
+
+Tier 3 Update: Add "Unified ROI Dashboard (Web + Voice + CRM)" to features.
+
+PHASE 3: EXECUTE THE AUDIT ACTION: Run a full scan of the codebase against the ATOMIC_SPEC.md you just updated.
+
+Delete the custom Contact Form modal logic in hero.tsx and navbar.tsx.
+
+Replace with Tally.openPopup('YOUR_FORM_ID'). (Use placeholder 3xjo7o).
+
+Verify the Spring Physics config matches { stiffness: 300... }.
+
+Verify the ::selection CSS is Gold.
+
+Verify next.config.js is clean for Vercel deployment.
+
+GO.

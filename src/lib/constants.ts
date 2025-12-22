@@ -7,12 +7,27 @@ export const PRIVACY_TEXT =
 export const TERMS_TEXT =
   "All IP rights transfer to the client upon final payment. Until then, code remains the property of Veruthia Consulting, LLC.";
 
+export const COMMANDERS = [
+  {
+    id: "ethan",
+    name: "Ethan Johnson",
+    title: "Managing Partner | Operations",
+    bio: "My 'Red Pill' moment happened at 19, scraping foundations and hauling demolition debris for $12/hour. I watched contractors leave massive profits on the table because they lacked systems. I realized that selling 'hard labor' is a trap; owning Assets is the only way out. I don't sleep until the system works. My reputation is the only asset I refuse to risk.",
+  },
+  {
+    id: "brody",
+    name: "Brody Bailey",
+    title: "Lead Architect | Engineering",
+    bio: "Code without structure is flying blind. While others build templates, I architect Enterprise-Grade SaaS infrastructure. My rule is absolute: 'If it's not in the PRD, it doesn't exist.' I don't just write code; I build systems that scale the P&L.",
+  },
+];
+
 export const PORTFOLIO_ITEMS = [
   {
     id: "smarthvac",
     name: "SmartHVAC Analytics",
     tag: "B2B SaaS",
-    description: "Enterprise-grade climate control analytics with real-time monitoring and predictive maintenance.",
+    description: "92,000 Lines of Code. ServiceTitan Auto-Import. 10 Analysis Playbooks. Multi-Tenant Auth.",
     gradient: "bg-gradient-to-br from-slate-900 via-blue-900 to-[#050505]",
     stats: { metric: "$720,000", label: "Asset Valuation" },
   },
@@ -20,33 +35,33 @@ export const PORTFOLIO_ITEMS = [
     id: "metro-barber",
     name: "Metro-Barber-OS",
     tag: "Booking Engine",
-    description: "Premium appointment scheduling with zero no-shows and intelligent commission logic.",
+    description: "Custom CMS & ERP. Native Voice Receptionist Integration. Unified Dashboard. Infinite Scalability.",
     gradient: "bg-gradient-to-br from-yellow-700 via-yellow-900 to-[#050505]",
     stats: { metric: "Zero", label: "No-Shows" },
   },
   {
     id: "hometown",
     name: "Hometown Rock & Landscape",
-    tag: "Logistics",
-    description: "Complete materials management with automated calculators and delivery optimization.",
+    tag: "Logistics ERP",
+    description: "Logistics ERP. 30+ Proprietary Material Calculators (Volume-to-Weight).",
     gradient: "bg-gradient-to-br from-emerald-900 via-stone-800 to-[#050505]",
     stats: { metric: "30+", label: "Material Calculators" },
-  },
-  {
-    id: "acts-heat-air",
-    name: "Acts Heat & Air",
-    tag: "Mini-SaaS",
-    description: "Integrated financing workflows and intelligent scheduling for HVAC service companies.",
-    gradient: "bg-gradient-to-br from-orange-900 via-red-900 to-[#050505]",
-    stats: { metric: "Integrated", label: "Financing & Scheduling" },
   },
   {
     id: "all-care-drain",
     name: "All Care Drain",
     tag: "SEO Platform",
-    description: "High-performance lead capture with industry-leading SEO optimization.",
+    description: "Speed Run (12 Days). 98/100 SEO Score. Dual-Submission Lead Capture.",
     gradient: "bg-gradient-to-br from-cyan-900 via-teal-900 to-[#050505]",
     stats: { metric: "98/100", label: "SEO Score" },
+  },
+  {
+    id: "acts-heat-air",
+    name: "Acts Heat & Air",
+    tag: "Mini-SaaS",
+    description: "Mini-SaaS. Integrated Financing (Synchrony API) & Schedule Sync.",
+    gradient: "bg-gradient-to-br from-orange-900 via-red-900 to-[#050505]",
+    stats: { metric: "Integrated", label: "Financing & Scheduling" },
   },
 ];
 
@@ -111,14 +126,14 @@ export const PRICING_TIERS = [
       "SMS & Email notifications",
       "CRM integration",
     ],
-    cta: "Get Started",
+    cta: "Start Asset Audit",
     featured: false,
   },
   {
-    name: "The Recovery Sprint",
+    name: "The Digital Storefront / Recovery",
     price: "$5,000",
-    description: "72-Hour Rescue for broken code/projects",
-    retainer: "$150/mo Hosting & Security Only",
+    description: "72-Hour Rescue or New Build",
+    retainer: "$150/mo Hosting & Security",
     features: [
       "Emergency code audit",
       "Critical bug fixes",
@@ -126,7 +141,7 @@ export const PRICING_TIERS = [
       "72-hour turnaround",
       "Post-mortem report",
     ],
-    cta: "Request Rescue",
+    cta: "Start Asset Audit",
     featured: false,
   },
   {
@@ -137,12 +152,13 @@ export const PRICING_TIERS = [
     features: [
       "Custom ERP system",
       "Inventory management",
+      "Native Voice Receptionist Integration",
+      "Unified ROI Dashboard (Web + Voice + CRM)",
       "Bilingual interface",
-      "Third-party integrations",
       "90-day support",
       "Full IP transfer",
     ],
-    cta: "Start Building",
+    cta: "Start Asset Audit",
     featured: true,
   },
   {
@@ -158,7 +174,7 @@ export const PRICING_TIERS = [
       "Analytics dashboard",
       "Dedicated support",
     ],
-    cta: "Contact Us",
+    cta: "Start Asset Audit",
     featured: false,
   },
 ];

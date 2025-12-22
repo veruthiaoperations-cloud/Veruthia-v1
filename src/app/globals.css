@@ -5,6 +5,7 @@
   --background-start-rgb: 5, 5, 5;
   --background-end-rgb: 5, 5, 5;
   --rich-black: #050505;
+  --gold-accent: #d4af37;
 }
 
 html {
@@ -36,6 +37,7 @@ body {
   background: var(--rich-black);
   overscroll-behavior: none;
   -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: transparent;
 }
 
 ::-webkit-scrollbar {
@@ -61,6 +63,24 @@ body {
 }
 
 ::selection {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
+  background: #333;
+  color: #d4af37;
+}
+
+button, a {
+  min-height: 44px;
+}
+
+.tally-loading {
+  min-height: 600px;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }

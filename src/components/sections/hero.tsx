@@ -52,7 +52,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
           transition={{ ...SPRING_PHYSICS, delay: 0.4 }}
         >
           <Button onClick={onOpenContact} size="lg">
-            Book Your Asset Audit
+            Start Asset Audit
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
         </motion.div>
