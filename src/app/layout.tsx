@@ -3,6 +3,7 @@ import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
+import LenisProvider from "@/components/providers/lenis-provider";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -19,7 +20,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Veruthia Consulting | Digital Asset Architecture",
   description:
-    "High-end software architecture firm. We build digital assets, not websites.",
+    "High-end software architecture firm. We build systems, not websites. Section 179 eligible digital assets.",
 };
 
 export default function RootLayout({
@@ -30,9 +31,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <body className="font-inter bg-black text-white antialiased">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <LenisProvider>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </LenisProvider>
       </body>
     </html>
   );

@@ -30,7 +30,7 @@ export default function Pricing({ onOpenContact }: PricingProps) {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {PRICING_TIERS.map((tier, index) => (
             <motion.div
               key={tier.name}
@@ -40,7 +40,7 @@ export default function Pricing({ onOpenContact }: PricingProps) {
               transition={{ ...SPRING_PHYSICS, delay: index * 0.1 }}
               whileHover={{ y: -5 }}
               className={cn(
-                "p-8 rounded-xl border",
+                "p-6 rounded-xl border flex flex-col w-full max-w-full",
                 tier.featured
                   ? "bg-white text-black border-white"
                   : "bg-gray-900/50 border-white/10"
@@ -48,7 +48,7 @@ export default function Pricing({ onOpenContact }: PricingProps) {
             >
               <h3
                 className={cn(
-                  "font-playfair text-2xl font-semibold mb-2",
+                  "font-playfair text-xl font-semibold mb-2",
                   tier.featured ? "text-black" : "text-white"
                 )}
               >
@@ -56,7 +56,7 @@ export default function Pricing({ onOpenContact }: PricingProps) {
               </h3>
               <p
                 className={cn(
-                  "text-4xl font-bold mb-4",
+                  "text-3xl font-bold mb-2",
                   tier.featured ? "text-black" : "text-white"
                 )}
               >
@@ -64,24 +64,27 @@ export default function Pricing({ onOpenContact }: PricingProps) {
               </p>
               <p
                 className={cn(
-                  "mb-6",
+                  "text-sm mb-6",
                   tier.featured ? "text-gray-600" : "text-gray-400"
                 )}
               >
                 {tier.description}
               </p>
 
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-2 mb-6 flex-1">
                 {tier.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-3">
+                  <li key={feature} className="flex items-start gap-2">
                     <Check
                       className={cn(
-                        "w-5 h-5",
+                        "w-4 h-4 mt-0.5 flex-shrink-0",
                         tier.featured ? "text-black" : "text-emerald-400"
                       )}
                     />
                     <span
-                      className={tier.featured ? "text-gray-700" : "text-gray-300"}
+                      className={cn(
+                        "text-sm",
+                        tier.featured ? "text-gray-700" : "text-gray-300"
+                      )}
                     >
                       {feature}
                     </span>
@@ -93,6 +96,7 @@ export default function Pricing({ onOpenContact }: PricingProps) {
                 onClick={onOpenContact}
                 variant={tier.featured ? "secondary" : "outline"}
                 className="w-full"
+                size="sm"
               >
                 {tier.cta}
               </Button>

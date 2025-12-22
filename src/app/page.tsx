@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Hero from "@/components/sections/hero";
 import Services from "@/components/sections/services";
 import Portfolio from "@/components/sections/portfolio";
@@ -9,6 +10,7 @@ import ContactModal from "@/components/sections/contact-modal";
 import Toast from "@/components/ui/toast";
 
 export default function Home() {
+  const router = useRouter();
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [toast, setToast] = useState<{
     message: string;
@@ -25,6 +27,13 @@ export default function Home() {
     setTimeout(() => setToast((prev) => ({ ...prev, isVisible: false })), 5000);
   };
 
+  const handleSuccess = () => {
+    setIsContactOpen(false);
+    setTimeout(() => {
+      router.push("/success");
+    }, 2000);
+  };
+
   return (
     <>
       <Hero onOpenContact={() => setIsContactOpen(true)} />
@@ -35,7 +44,7 @@ export default function Home() {
       <ContactModal
         isOpen={isContactOpen}
         onClose={() => setIsContactOpen(false)}
-        onSuccess={() => showToast("Audit request submitted successfully!", "success")}
+        onSuccess={handleSuccess}
         onError={() => showToast("Something went wrong. Please try again.", "error")}
       />
 

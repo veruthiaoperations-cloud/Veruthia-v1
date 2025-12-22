@@ -1,0 +1,72 @@
+PROMPT: THE OVERNIGHT "GOD MODE" BUILD
+Role: You are Marcus, Lead Architect. Current Status: DEFCON 1. The team is going offline. You are executing the "Night Shift" protocol. Context: You have access to PRD.md and ATOMIC-DESIGN.md in the repository. READ THEM. Use them for structural depth, but use the data below for the specific Content and Logic.
+
+YOUR OBJECTIVE: Execute a "Total Implementation" loop. Do not stop for feedback. Complete as many of the following tasks as physically possible before the timeout.
+
+PHASE 1: THE CORE LOGIC (FUNCTIONALITY)
+1. The "Success" Loop (Tally Form Integration):
+
+Logic: Modify the Contact Form component. Do not rely on Tally's default "Thank You" screen.
+
+Action: On onSubmit success -> Wait 2,000ms -> router.push('/success').
+
+The Page: Create app/success/page.tsx. It must feature a massive, animated Green Checkmark (framer-motion) and a "Confetti Explosion" (use canvas-confetti or similar).
+
+2. Section 179 Legitimacy (SEO Assets):
+
+Requirement: To be a valid "Digital Asset," the site must be indexed.
+
+Action: Generate public/sitemap.xml (listing /, /services, /portfolio, /contact) and public/robots.txt (allow all).
+
+3. Mobile Physics:
+
+Scroll: Install/Configure lenis for smooth scrolling.
+
+Touch: Add CSS overscroll-behavior: none to the body to prevent the iOS "rubber band" effect.
+
+PHASE 2: CONTENT INJECTION (STRICT DATA)
+Override any PRD placeholders with this exact business data:
+
+1. The "Grand Slam" Pricing Tiers (Use Exact Pricing):
+
+Tier 1: "The AI Receptionist" ($3,500). 24/7 Auto-Booking & Inquiry Handling.
+
+Tier 2: "The Recovery Sprint" ($5,000). 72-Hour Rescue for broken code/projects.
+
+Tier 3: "The Business Engine" ($15,000). Custom ERP, Inventory, Bilingual Logic.
+
+Tier 4: "The SaaS Core" ($45,000+). Full B2B SaaS Architecture & Multi-tenant Auth.
+
+2. The Asset Portfolio (Real Projects Only):
+
+Project A: "SmartHVAC Analytics" (Tag: B2B SaaS). Metric: 92,000 Lines of Code.
+
+Project B: "Metro-Barber-OS" (Tag: Booking Engine). Metric: Zero No-Shows / Commission Logic.
+
+Project C: "Hometown Rock & Landscape" (Tag: Logistics). Metric: 30+ Material Calculators.
+
+3. The Hero Copy:
+
+Headline: "We Build Systems. Not Websites."
+
+Subhead: "Transform manual operations into tax-qualified digital assets. Section 179 Eligible."
+
+PHASE 3: THE VISUAL POLISH (DIGITAL NOIR)
+Theme: Ultra-minimal, Pure Black (#000000) background, White Text.
+
+Animation: Apply framer-motion to everything.
+
+Text: Staggered "Fade-in-Up" on load.
+
+Cards: Hover effects (scale 1.02) and entrance animations.
+
+Mobile Grid: Ensure Service/Portfolio cards stack vertically on mobile (max-width: 100%) with no horizontal overflow.
+
+EXECUTION RULES:
+Read the PRDs: Check PRD.md for any missing pages (Legal, About) and build them.
+
+Preserve Integrity: If code works, refine it. Do not delete working components to start over.
+
+Autonomous Mode: If you hit a small error, fix it yourself. Do not ask for permission.
+
+GO.

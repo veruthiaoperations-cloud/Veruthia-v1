@@ -54,8 +54,6 @@ export default function ContactModal({
       });
 
       if (response.ok) {
-        onSuccess();
-        onClose();
         setFormData({
           full_name: "",
           email: "",
@@ -64,6 +62,7 @@ export default function ContactModal({
           project_budget: "",
         });
         setStep(1);
+        onSuccess();
       } else {
         onError();
       }
@@ -131,7 +130,7 @@ export default function ContactModal({
             </div>
             <div>
               <label className="block text-sm font-medium mb-2">
-                Service Type
+                Service Interest
               </label>
               <select
                 name="service_type"
@@ -140,9 +139,10 @@ export default function ContactModal({
                 className="w-full px-4 py-3 bg-gray-800 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-white/30"
               >
                 <option value="">Select a service</option>
-                <option value="web-architecture">Web Architecture</option>
-                <option value="automation">Automation</option>
-                <option value="consulting">Consulting</option>
+                <option value="ai-receptionist">The AI Receptionist ($3,500)</option>
+                <option value="recovery-sprint">The Recovery Sprint ($5,000)</option>
+                <option value="business-engine">The Business Engine ($15,000)</option>
+                <option value="saas-core">The SaaS Core ($45,000+)</option>
               </select>
             </div>
             <div className="flex gap-4 mt-4">
@@ -163,7 +163,7 @@ export default function ContactModal({
             </p>
             <div>
               <label className="block text-sm font-medium mb-2">
-                Project Budget
+                Estimated Budget
               </label>
               <select
                 name="project_budget"
@@ -172,10 +172,10 @@ export default function ContactModal({
                 className="w-full px-4 py-3 bg-gray-800 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-white/30"
               >
                 <option value="">Select a budget range</option>
-                <option value="10k-25k">$10,000 - $25,000</option>
-                <option value="25k-50k">$25,000 - $50,000</option>
-                <option value="50k-100k">$50,000 - $100,000</option>
-                <option value="100k+">$100,000+</option>
+                <option value="3k-5k">$3,000 - $5,000</option>
+                <option value="5k-15k">$5,000 - $15,000</option>
+                <option value="15k-45k">$15,000 - $45,000</option>
+                <option value="45k+">$45,000+</option>
               </select>
             </div>
             <div className="flex gap-4 mt-4">
