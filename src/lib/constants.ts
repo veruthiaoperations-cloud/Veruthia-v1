@@ -1,4 +1,7 @@
 export const DISCLAIMER_TEXT =
+  "CAPITAL ASSET ADVISORY: This system is architected as a depreciable software asset. Under Section 179, qualified businesses may deduct the full purchase price from gross income. Invest in your growth, not in taxes.*";
+
+export const DISCLAIMER_FOOTNOTE =
   "* Veruthia Consulting, LLC provides software architecture, not tax advice. Consult a Certified Public Accountant (CPA).";
 
 export const PRIVACY_TEXT =
@@ -122,7 +125,7 @@ export const PRICING_TIERS = [
   {
     name: "The AI Receptionist",
     price: "$3,500",
-    description: "24/7 Auto-Booking & Inquiry Handling",
+    description: "For the Operator who refuses to miss a paycheck. Stop trading time for scheduling. Capture revenue while you sleep.",
     retainer: "Retainer: Usage-Based (Call Volume)",
     features: [
       "Automated appointment scheduling",
@@ -137,7 +140,7 @@ export const PRICING_TIERS = [
   {
     name: "The Digital Storefront / Recovery",
     price: "$5,000",
-    description: "72-Hour Rescue or New Build",
+    description: "For the Owner demanding a sovereign footprint. A high-performance digital asset that works harder than your best employee.",
     retainer: "$150/mo Hosting & Security",
     features: [
       "Emergency code audit",
@@ -152,7 +155,7 @@ export const PRICING_TIERS = [
   {
     name: "The Business Engine",
     price: "$15,000",
-    description: "Custom ERP, Inventory, Bilingual Logic",
+    description: "For the CEO who owns a System. Move from 'Self-Employed' to 'Business Owner' with a unified command center.",
     retainer: "Custom SLA & Maintenance Package",
     features: [
       "Custom ERP system",
@@ -169,7 +172,7 @@ export const PRICING_TIERS = [
   {
     name: "The SaaS Core",
     price: "$45,000+",
-    description: "Full B2B SaaS Architecture & Multi-tenant Auth",
+    description: "Enterprise Architecture.",
     retainer: "Enterprise Support Agreement",
     features: [
       "Multi-tenant architecture",

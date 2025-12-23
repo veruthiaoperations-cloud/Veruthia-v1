@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
-import { PRICING_TIERS, DISCLAIMER_TEXT } from "@/lib/constants";
+import { PRICING_TIERS, DISCLAIMER_TEXT, DISCLAIMER_FOOTNOTE } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import Button from "@/components/ui/button";
 
@@ -122,10 +122,13 @@ export default function Pricing({ onOpenContact }: PricingProps) {
 
         <motion.div
           {...bodyAnimation}
-          className="mt-12 text-center"
+          className="mt-12 text-center space-y-4"
         >
-          <p className="text-xs text-zinc-500 max-w-2xl mx-auto font-sans">
+          <p className="text-sm text-zinc-400 max-w-3xl mx-auto font-sans font-medium">
             {DISCLAIMER_TEXT}
+          </p>
+          <p className="text-xs text-zinc-600 max-w-2xl mx-auto font-sans">
+            {DISCLAIMER_FOOTNOTE}
           </p>
         </motion.div>
       </div>

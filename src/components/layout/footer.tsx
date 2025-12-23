@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { DISCLAIMER_TEXT } from "@/lib/constants";
+import { DISCLAIMER_FOOTNOTE } from "@/lib/constants";
 
 export default function Footer() {
   return (
@@ -61,7 +61,7 @@ export default function Footer() {
 
         <div className="mt-8 pt-8 border-t border-white/10">
           <p className="text-xs text-zinc-500 text-center mb-4">
-            {DISCLAIMER_TEXT}
+            {DISCLAIMER_FOOTNOTE}
           </p>
         </div>
 
