@@ -73,13 +73,13 @@ export default function Pricing({ onOpenContact }: PricingProps) {
               className={cn(
                 "relative p-6 rounded-xl border flex flex-col backdrop-blur-md bg-gradient-to-b from-white/5 to-transparent",
                 tier.featured
-                  ? "border-zinc-500 ring-1 ring-zinc-600"
+                  ? "border-[#d4af37] ring-1 ring-[#d4af37]/50"
                   : "border-white/10"
               )}
             >
               {tier.featured && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="bg-zinc-700 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide font-display">
+                  <span className="bg-[#d4af37] text-black text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide font-display">
                     Recommended
                   </span>
                 </div>

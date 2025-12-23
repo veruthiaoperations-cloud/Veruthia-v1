@@ -44,7 +44,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
         >
           We Build Systems.
           <br />
-          <span className="text-gray-400">Not Websites.</span>
+          <span className="text-zinc-400">Not Websites.</span>
         </motion.h1>
 
         <motion.p
