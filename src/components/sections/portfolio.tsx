@@ -13,6 +13,14 @@ const iconMap: Record<string, React.ReactNode> = {
   Zap: <Zap className="w-12 h-12" />,
 };
 
+const gradientMap: Record<string, string> = {
+  "SmartHVAC Analytics": "bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/40 via-black to-black",
+  "Metro-Barber-OS": "bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-900/40 via-black to-black",
+  "Hometown Rock & Landscape": "bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-900/40 via-black to-black",
+  "All Care Drain": "bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-900/40 via-black to-black",
+  "Acts Heat & Air": "bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-900/40 via-black to-black",
+};
+
 const headerAnimation = {
   initial: { opacity: 0, y: 40 },
   whileInView: { opacity: 1, y: 0 },
@@ -46,16 +54,16 @@ export default function Portfolio() {
   return (
     <section id="portfolio" className="py-24 bg-[#050505]">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <motion.h2
             {...headerAnimation}
-            className="font-playfair text-4xl md:text-5xl font-bold mb-4"
+            className="font-serif text-4xl md:text-5xl font-bold mb-4"
           >
             The Portfolio Array
           </motion.h2>
           <motion.p
             {...bodyAnimation}
-            className="text-gray-400 max-w-2xl mx-auto"
+            className="text-gray-400 max-w-2xl mx-auto font-sans"
           >
             Software products built for real businesses. Each one a
             capital digital asset.*
@@ -75,8 +83,8 @@ export default function Portfolio() {
               variants={itemVariants}
               whileHover={{ scale: 1.02, boxShadow: "0 0 30px rgba(212, 175, 55, 0.1)" }}
               className={cn(
-                "relative overflow-hidden rounded-xl p-8 min-h-[320px] flex flex-col justify-end w-full max-w-full",
-                item.gradient
+                "relative overflow-hidden rounded-xl p-8 min-h-[320px] flex flex-col justify-end border border-white/10 backdrop-blur-md",
+                gradientMap[item.name] || item.gradient
               )}
             >
               <div className="absolute top-6 right-6 text-white/10">
@@ -84,16 +92,16 @@ export default function Portfolio() {
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/95 via-[#050505]/60 to-transparent" />
               <div className="relative z-10">
-                <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs uppercase tracking-wide text-gray-300 mb-3 font-cinzel">
+                <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs uppercase tracking-wide text-gray-300 mb-3 font-display">
                   {item.tag}
                 </span>
-                <h3 className="font-playfair text-2xl md:text-3xl font-bold mb-2">
+                <h3 className="font-serif text-2xl md:text-3xl font-bold mb-2">
                   {item.name}
                 </h3>
-                <p className="text-gray-300 text-sm mb-4">{item.description}</p>
+                <p className="text-gray-300 text-sm mb-4 font-sans">{item.description}</p>
                 <div className="flex items-baseline gap-2">
                   <p className="text-3xl font-bold">{item.stats.metric}</p>
-                  <p className="text-sm text-gray-400">{item.stats.label}</p>
+                  <p className="text-sm text-gray-400 font-sans">{item.stats.label}</p>
                 </div>
               </div>
             </motion.div>

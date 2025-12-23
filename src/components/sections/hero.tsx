@@ -31,7 +31,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
           initial={bodyAnimation.initial}
           animate={bodyAnimation.animate}
           transition={{ ...bodyAnimation.transition, delay: 0.1 }}
-          className="text-gray-400 uppercase tracking-widest text-sm mb-6 font-cinzel"
+          className="text-gray-400 uppercase tracking-widest text-sm mb-6 font-display"
         >
           Digital Asset Architecture
         </motion.p>
@@ -40,7 +40,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
           initial={headerAnimation.initial}
           animate={headerAnimation.animate}
           transition={{ ...headerAnimation.transition, delay: 0.2 }}
-          className="font-playfair text-5xl md:text-7xl font-bold leading-tight mb-8"
+          className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-8"
         >
           We Build Systems.
           <br />
@@ -51,7 +51,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
           initial={bodyAnimation.initial}
           animate={bodyAnimation.animate}
           transition={{ ...bodyAnimation.transition, delay: 0.3 }}
-          className="text-xl text-gray-400 max-w-2xl mx-auto mb-12"
+          className="text-xl text-gray-400 max-w-2xl mx-auto mb-12 font-sans"
         >
           Transform your manual operations into capital digital assets.
           Built for ROI. Built for scale.

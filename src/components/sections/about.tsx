@@ -36,16 +36,16 @@ export default function About() {
   return (
     <section id="about" className="py-24 bg-[#050505]">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <motion.h2
             {...headerAnimation}
-            className="font-playfair text-4xl md:text-5xl font-bold mb-4"
+            className="font-serif text-4xl md:text-5xl font-bold mb-4"
           >
             The Commanders
           </motion.h2>
           <motion.p
             {...bodyAnimation}
-            className="text-gray-400 max-w-2xl mx-auto"
+            className="text-gray-400 max-w-2xl mx-auto font-sans"
           >
             The architects behind every digital asset.
           </motion.p>
@@ -62,17 +62,17 @@ export default function About() {
             <motion.div
               key={commander.id}
               variants={itemVariants}
-              className="p-8 rounded-xl border border-white/10 bg-zinc-900/30"
+              className="p-8 rounded-xl border border-white/10 bg-gradient-to-b from-white/5 to-transparent backdrop-blur-md"
             >
               <div className="mb-6">
-                <h3 className="font-playfair text-2xl font-bold mb-1">
+                <h3 className="font-serif text-2xl font-bold mb-1">
                   {commander.name}
                 </h3>
-                <p className="text-zinc-500 text-sm uppercase tracking-wide font-cinzel">
+                <p className="text-zinc-500 text-sm uppercase tracking-wide font-display">
                   {commander.title}
                 </p>
               </div>
-              <blockquote className="text-gray-300 leading-relaxed italic border-l-2 border-zinc-700 pl-4">
+              <blockquote className="text-gray-300 leading-relaxed italic border-l-2 border-zinc-700 pl-4 font-sans">
                 &ldquo;{commander.bio}&rdquo;
               </blockquote>
             </motion.div>

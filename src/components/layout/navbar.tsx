@@ -40,7 +40,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="font-cinzel text-2xl font-bold tracking-wider">
+            <Link href="/" className="font-display text-2xl font-bold tracking-wider">
               VERUTHIA
             </Link>
 

@@ -43,16 +43,16 @@ export default function Pricing({ onOpenContact }: PricingProps) {
   return (
     <section id="pricing" className="py-24 bg-[#050505]">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <motion.h2
             {...headerAnimation}
-            className="font-playfair text-4xl md:text-5xl font-bold mb-4"
+            className="font-serif text-4xl md:text-5xl font-bold mb-4"
           >
             Investment Tiers
           </motion.h2>
           <motion.p
             {...bodyAnimation}
-            className="text-gray-400 max-w-2xl mx-auto"
+            className="text-gray-400 max-w-2xl mx-auto font-sans"
           >
             High-ticket positioning for high-value outcomes.
           </motion.p>
@@ -71,29 +71,29 @@ export default function Pricing({ onOpenContact }: PricingProps) {
               variants={itemVariants}
               whileHover={{ y: -5 }}
               className={cn(
-                "relative p-6 rounded-xl border flex flex-col w-full max-w-full",
+                "relative p-6 rounded-xl border flex flex-col backdrop-blur-md bg-gradient-to-b from-white/5 to-transparent",
                 tier.featured
-                  ? "bg-[#050505] border-zinc-600"
-                  : "bg-zinc-900/50 border-white/10"
+                  ? "border-zinc-500 ring-1 ring-zinc-600"
+                  : "border-white/10"
               )}
             >
               {tier.featured && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="bg-zinc-700 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide font-cinzel">
+                  <span className="bg-zinc-700 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide font-display">
                     Recommended
                   </span>
                 </div>
               )}
-              <h3 className="font-playfair text-xl font-semibold mb-2 text-white">
+              <h3 className="font-serif text-xl font-semibold mb-2 text-white">
                 {tier.name}
               </h3>
               <p className="text-3xl font-bold mb-2 text-white">
                 {tier.price}
               </p>
-              <p className="text-sm mb-2 text-gray-400">
+              <p className="text-sm mb-2 text-gray-400 font-sans">
                 {tier.description}
               </p>
-              <p className="text-xs mb-6 text-zinc-500 italic">
+              <p className="text-xs mb-6 text-zinc-500 italic font-sans">
                 {tier.retainer}
               </p>
 
@@ -101,7 +101,7 @@ export default function Pricing({ onOpenContact }: PricingProps) {
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-2">
                     <Check className="w-4 h-4 mt-0.5 flex-shrink-0 text-emerald-400" />
-                    <span className="text-sm text-gray-300">
+                    <span className="text-sm text-gray-300 font-sans">
                       {feature}
                     </span>
                   </li>
@@ -124,7 +124,7 @@ export default function Pricing({ onOpenContact }: PricingProps) {
           {...bodyAnimation}
           className="mt-12 text-center"
         >
-          <p className="text-xs text-zinc-500 max-w-2xl mx-auto">
+          <p className="text-xs text-zinc-500 max-w-2xl mx-auto font-sans">
             {DISCLAIMER_TEXT}
           </p>
         </motion.div>

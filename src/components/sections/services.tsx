@@ -43,16 +43,16 @@ export default function Services() {
   return (
     <section id="services" className="py-24 bg-[#050505]">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <motion.h2
             {...headerAnimation}
-            className="font-playfair text-4xl md:text-5xl font-bold mb-4"
+            className="font-serif text-4xl md:text-5xl font-bold mb-4"
           >
             What We Build
           </motion.h2>
           <motion.p
             {...bodyAnimation}
-            className="text-gray-400 max-w-2xl mx-auto"
+            className="text-gray-400 max-w-2xl mx-auto font-sans"
           >
             Digital infrastructure designed for scale, performance, and
             long-term value creation.
@@ -71,15 +71,15 @@ export default function Services() {
               key={service.title}
               variants={itemVariants}
               whileHover={{ y: -5 }}
-              className="p-8 bg-zinc-900/50 border border-white/10 rounded-lg"
+              className="p-8 bg-gradient-to-b from-white/5 to-transparent border border-white/10 backdrop-blur-md rounded-xl"
             >
               <div className="w-16 h-16 bg-white/5 rounded-lg flex items-center justify-center mb-6 text-white">
                 {iconMap[service.icon]}
               </div>
-              <h3 className="font-playfair text-2xl font-semibold mb-4">
+              <h3 className="font-serif text-2xl font-semibold mb-4">
                 {service.title}
               </h3>
-              <p className="text-gray-400">{service.description}</p>
+              <p className="text-gray-400 font-sans">{service.description}</p>
             </motion.div>
           ))}
         </motion.div>

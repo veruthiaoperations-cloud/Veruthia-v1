@@ -9,6 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
+        serif: ["var(--font-playfair)", "serif"],
+        display: ["var(--font-cinzel)", "serif"],
+        sans: ["var(--font-inter)", "sans-serif"],
         playfair: ["var(--font-playfair)", "serif"],
         inter: ["var(--font-inter)", "sans-serif"],
         cinzel: ["var(--font-cinzel)", "serif"],
