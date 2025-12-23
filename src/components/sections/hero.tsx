@@ -40,12 +40,23 @@ export default function Hero({ onOpenContact }: HeroProps) {
           initial={headerAnimation.initial}
           animate={headerAnimation.animate}
           transition={{ ...headerAnimation.transition, delay: 0.2 }}
-          className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-8"
+          className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6"
         >
           We Build Systems.
           <br />
           <span className="text-zinc-400">Not Websites.</span>
         </motion.h1>
+
+        <motion.div
+          initial={bodyAnimation.initial}
+          animate={bodyAnimation.animate}
+          transition={{ ...bodyAnimation.transition, delay: 0.25 }}
+          className="mb-8"
+        >
+          <span className="inline-block px-4 py-2 text-xs uppercase tracking-widest text-[#d4af37] border border-[#d4af37]/30 bg-[#d4af37]/5 rounded-full font-display">
+            Section 179 Qualified Capital Asset
+          </span>
+        </motion.div>
 
         <motion.p
           initial={bodyAnimation.initial}

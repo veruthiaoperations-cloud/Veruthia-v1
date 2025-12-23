@@ -8,6 +8,7 @@ import Portfolio from "@/components/sections/portfolio";
 import Process from "@/components/sections/process";
 import About from "@/components/sections/about";
 import Pricing from "@/components/sections/pricing";
+import { TALLY_FORM_ID } from "@/lib/tally";
 
 export default function Home() {
   const router = useRouter();
@@ -35,7 +36,7 @@ export default function Home() {
 
   const handleOpenTally = useCallback(() => {
     if (typeof window !== 'undefined' && window.Tally) {
-      window.Tally.openPopup('3xjo7o', {
+      window.Tally.openPopup(TALLY_FORM_ID, {
         layout: 'modal',
         width: 600,
         hideTitle: true,
@@ -49,7 +50,7 @@ export default function Home() {
       const checkAndOpen = setInterval(() => {
         if (typeof window !== 'undefined' && window.Tally) {
           clearInterval(checkAndOpen);
-          window.Tally.openPopup('3xjo7o', {
+          window.Tally.openPopup(TALLY_FORM_ID, {
             layout: 'modal',
             width: 600,
             hideTitle: true,
@@ -69,8 +70,8 @@ export default function Home() {
   return (
     <>
       <Hero onOpenContact={handleOpenTally} />
-      <Services />
       <Portfolio />
+      <Services />
       <Process />
       <About />
       <Pricing onOpenContact={handleOpenTally} />

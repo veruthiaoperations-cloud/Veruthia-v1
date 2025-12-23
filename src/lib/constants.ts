@@ -41,7 +41,7 @@ export const PORTFOLIO_ITEMS = [
     tag: "Booking Engine",
     description: "Custom CMS & ERP. Native Voice Receptionist Integration. Unified Ecosystem (Web + Voice + CRM). Infinite Scalability.",
     gradient: "bg-gradient-to-br from-amber-900 via-yellow-950 to-[#050505]",
-    stats: { metric: "Zero", label: "No-Shows" },
+    stats: { metric: "Automated", label: "Booking Logic" },
     icon: "Code",
   },
   {
