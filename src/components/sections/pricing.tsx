@@ -52,10 +52,21 @@ export default function Pricing({ onOpenContact }: PricingProps) {
           </motion.h2>
           <motion.p
             {...bodyAnimation}
-            className="text-gray-400 max-w-2xl mx-auto font-sans"
+            className="text-gray-400 max-w-2xl mx-auto font-sans mb-8"
           >
             High-ticket positioning for high-value outcomes.
           </motion.p>
+          <motion.div
+            {...bodyAnimation}
+            className="inline-block px-6 py-3 border border-[#d4af37]/30 bg-[#d4af37]/5 rounded-lg"
+          >
+            <p className="text-sm text-[#d4af37] font-display uppercase tracking-wide">
+              One Login. Infinite Scalability.
+            </p>
+            <p className="text-xs text-zinc-400 mt-1 font-sans">
+              Start with a Storefront, unlock the AI Receptionist and Business Engine in the same Sovereign Dashboard.
+            </p>
+          </motion.div>
         </div>
 
         <motion.div

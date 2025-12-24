@@ -92,6 +92,12 @@ export const SERVICES = [
       "Strategic implementation and deployment of enterprise-grade software systems.",
     icon: "MessageSquare",
   },
+  {
+    title: "Unified Architecture",
+    description:
+      "All assets deploy to a single Admin Interface. As you upgrade, your dashboard evolves.",
+    icon: "Layers",
+  },
 ];
 
 export const PROCESS_STEPS = [
@@ -123,31 +129,31 @@ export const PROCESS_STEPS = [
 
 export const PRICING_TIERS = [
   {
-    name: "The AI Receptionist",
-    price: "$3,500",
-    description: "For the Operator who refuses to miss a paycheck. Stop trading time for scheduling. Capture revenue while you sleep.",
-    retainer: "Retainer: Usage-Based (Call Volume)",
+    name: "The Digital Storefront",
+    price: "$5,000",
+    description: "Premium Web Build with Client CMS Access. Includes secure Admin Portal to manage content.",
+    retainer: "Hosting: $150/mo",
     features: [
-      "Automated appointment scheduling",
-      "Intelligent inquiry routing",
-      "24/7 availability",
-      "SMS & Email notifications",
-      "CRM integration",
+      "High-performance web asset",
+      "Secure Admin Portal access",
+      "Content management system",
+      "99.9% Uptime Architecture",
+      "SSL & security hardening",
     ],
     cta: "Start Asset Audit",
     featured: false,
   },
   {
-    name: "The Digital Storefront / Recovery",
-    price: "$5,000",
-    description: "For the Owner demanding a sovereign footprint. A high-performance digital asset that works harder than your best employee.",
-    retainer: "$150/mo Hosting & Security",
+    name: "The AI Receptionist",
+    price: "$3,500",
+    description: "24/7 Voice Intelligence. Integrates into your Admin Portal with live ROI Analytics & Call Logs.",
+    retainer: "Usage-Based Retainer",
     features: [
-      "Emergency code audit",
-      "Critical bug fixes",
-      "Performance optimization",
-      "72-hour turnaround",
-      "Post-mortem report",
+      "Automated appointment scheduling",
+      "Intelligent inquiry routing",
+      "24/7 availability",
+      "Live ROI Analytics",
+      "Call Logs in Admin Portal",
     ],
     cta: "Start Asset Audit",
     featured: false,
@@ -155,14 +161,14 @@ export const PRICING_TIERS = [
   {
     name: "The Business Engine",
     price: "$15,000",
-    description: "For the CEO who owns a System. Move from 'Self-Employed' to 'Business Owner' with a unified command center.",
-    retainer: "Custom SLA & Maintenance Package",
+    description: "Operational Logic Module. Unlocks Inventory, Staffing, & CRM tabs inside your Unified Command Center.",
+    retainer: "Mgmt Retainer: $1,500/mo",
     features: [
       "Custom ERP system",
       "Inventory management",
-      "Native Voice Receptionist Integration",
-      "Unified Ecosystem (Web + Voice + CRM)",
-      "Bilingual interface",
+      "Staffing & scheduling",
+      "Unified Command Center",
+      "Native Voice Integration",
       "90-day support",
       "Full IP transfer*",
     ],

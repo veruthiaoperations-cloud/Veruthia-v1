@@ -1,13 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Layout, Zap, MessageSquare } from "lucide-react";
+import { Layout, Zap, MessageSquare, Layers } from "lucide-react";
 import { SERVICES } from "@/lib/constants";
 
 const iconMap: Record<string, React.ReactNode> = {
   Layout: <Layout className="w-8 h-8" />,
   Zap: <Zap className="w-8 h-8" />,
   MessageSquare: <MessageSquare className="w-8 h-8" />,
+  Layers: <Layers className="w-8 h-8" />,
 };
 
 const headerAnimation = {
@@ -64,7 +65,7 @@ export default function Services() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {SERVICES.map((service) => (
             <motion.div
