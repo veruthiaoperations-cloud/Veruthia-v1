@@ -39,7 +39,7 @@ export const PORTFOLIO_ITEMS = [
     id: "metro-barber",
     name: "Metro-Barber-OS",
     tag: "Booking Engine",
-    description: "Custom CMS & ERP. Native Voice Receptionist Integration. Unified Ecosystem (Web + Voice + CRM). Infinite Scalability.",
+    description: "Custom Client Control Panel & ERP. Native Voice Receptionist Integration. Unified Ecosystem (Web + Voice + CRM). Infinite Scalability.",
     gradient: "bg-gradient-to-br from-amber-900 via-yellow-950 to-[#050505]",
     stats: { metric: "Automated", label: "Booking Logic" },
     icon: "Code",
@@ -131,12 +131,12 @@ export const PRICING_TIERS = [
   {
     name: "The Digital Storefront",
     price: "$5,000",
-    description: "Premium Web Build with Client CMS Access. Includes secure Admin Portal to manage content.",
+    description: "You own the keys. Edit text, images, and offers instantly via your secure Control Panel. No coding required.",
     retainer: "Hosting: $150/mo",
     features: [
       "High-performance web asset",
-      "Secure Admin Portal access",
-      "Content management system",
+      "Secure Client Control Panel",
+      "Instant content editing",
       "99.9% Uptime Architecture",
       "SSL & security hardening",
     ],
@@ -146,14 +146,14 @@ export const PRICING_TIERS = [
   {
     name: "The AI Receptionist",
     price: "$3,500",
-    description: "24/7 Voice Intelligence. Integrates into your Admin Portal with live ROI Analytics & Call Logs.",
+    description: "Scales infinitely. Whether you get 5 calls or 500, the system handles the volume without complaining.",
     retainer: "Usage-Based Retainer",
     features: [
       "Automated appointment scheduling",
       "Intelligent inquiry routing",
       "24/7 availability",
       "Live ROI Analytics",
-      "Call Logs in Admin Portal",
+      "Call Logs in Control Panel",
     ],
     cta: "Start Asset Audit",
     featured: false,
@@ -161,7 +161,7 @@ export const PRICING_TIERS = [
   {
     name: "The Business Engine",
     price: "$15,000",
-    description: "Operational Logic Module. Unlocks Inventory, Staffing, & CRM tabs inside your Unified Command Center.",
+    description: "Modular Architecture. Start with Inventory, add Staffing or Logistics later. The system grows with your revenue.",
     retainer: "Mgmt Retainer: $1,500/mo",
     features: [
       "Custom ERP system",

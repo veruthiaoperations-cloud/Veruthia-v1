@@ -61,10 +61,10 @@ export default function Pricing({ onOpenContact }: PricingProps) {
             className="inline-block px-6 py-3 border border-[#d4af37]/30 bg-[#d4af37]/5 rounded-lg"
           >
             <p className="text-sm text-[#d4af37] font-display uppercase tracking-wide">
-              One Login. Infinite Scalability.
+              Unified Infrastructure
             </p>
             <p className="text-xs text-zinc-400 mt-1 font-sans">
-              Start with a Storefront, unlock the AI Receptionist and Business Engine in the same Sovereign Dashboard.
+              All assets plug into the same dashboard. Upgrade features instantly as you scale.
             </p>
           </motion.div>
         </div>
