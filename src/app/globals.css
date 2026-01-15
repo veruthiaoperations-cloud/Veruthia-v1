@@ -106,5 +106,4 @@ button, a {
 .headline-gold-effect {
   -webkit-text-stroke: 0.5px #D4AF37;
   text-stroke: 0.5px #D4AF37;
-  animation: subtle-glow 4s ease-in-out infinite;
 }
