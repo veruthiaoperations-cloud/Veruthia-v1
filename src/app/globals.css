@@ -96,15 +96,16 @@ button, a {
 
 @keyframes subtle-glow {
   0%, 100% {
-    text-shadow: 0 0 5px rgba(212, 175, 55, 0.4), 0 0 10px rgba(212, 175, 55, 0.3);
+    text-shadow: 0 0 5px rgba(212, 175, 55, 0.4);
   }
   50% {
-    text-shadow: 0 0 10px rgba(212, 175, 55, 0.6), 0 0 20px rgba(212, 175, 55, 0.4);
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
   }
 }
 
 .headline-gold-effect {
-  color: transparent;
+  color: white;
   -webkit-text-stroke: 1px #D4AF37;
   text-stroke: 1px #D4AF37;
+  animation: subtle-glow 4s ease-in-out infinite;
 }
