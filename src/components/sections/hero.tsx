@@ -27,10 +27,21 @@ export default function Hero({ onOpenContact }: HeroProps) {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.03)_0%,_transparent_70%)]" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        <motion.p
+        <motion.div
           initial={bodyAnimation.initial}
           animate={bodyAnimation.animate}
           transition={{ ...bodyAnimation.transition, delay: 0.1 }}
+          className="mb-4"
+        >
+          <span className="inline-block px-4 py-2 text-xs uppercase tracking-widest text-[#d4af37] border border-[#d4af37]/30 bg-[#d4af37]/5 rounded-full font-display">
+            Section 179 Qualified Capital Asset
+          </span>
+        </motion.div>
+
+        <motion.p
+          initial={bodyAnimation.initial}
+          animate={bodyAnimation.animate}
+          transition={{ ...bodyAnimation.transition, delay: 0.15 }}
           className="text-gray-400 uppercase tracking-widest text-sm mb-6 font-display"
         >
           Digital Asset Architecture
@@ -46,17 +57,6 @@ export default function Hero({ onOpenContact }: HeroProps) {
           <br />
           <span className="text-zinc-400">Not Websites</span>
         </motion.h1>
-
-        <motion.div
-          initial={bodyAnimation.initial}
-          animate={bodyAnimation.animate}
-          transition={{ ...bodyAnimation.transition, delay: 0.25 }}
-          className="mb-8"
-        >
-          <span className="inline-block px-4 py-2 text-xs uppercase tracking-widest text-[#d4af37] border border-[#d4af37]/30 bg-[#d4af37]/5 rounded-full font-display">
-            Section 179 Qualified Capital Asset
-          </span>
-        </motion.div>
 
         <motion.p
           initial={bodyAnimation.initial}
