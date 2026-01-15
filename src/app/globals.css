@@ -103,8 +103,7 @@ h3, h4, h5, h6, blockquote {
 }
 
 .headline-gold-effect {
-  color: hsl(var(--foreground));
+  color: transparent;
   -webkit-text-stroke: 1px #D4AF37;
   text-stroke: 1px #D4AF37;
-  animation: subtle-glow 4s ease-in-out infinite;
 }
