@@ -40,9 +40,9 @@ export default function Hero({ onOpenContact }: HeroProps) {
           initial={headerAnimation.initial}
           animate={headerAnimation.animate}
           transition={{ ...headerAnimation.transition, delay: 0.2 }}
-          className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6 headline-gold-effect"
+          className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6"
         >
-          We Build Systems.
+          <span className="headline-gold-effect">We Build Systems.</span>
           <br />
           <span className="text-zinc-400">Not Websites.</span>
         </motion.h1>
