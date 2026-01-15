@@ -71,6 +71,14 @@ button, a {
   min-height: 44px;
 }
 
+h1, h2 {
+  font-family: var(--font-playfair), 'Playfair Display', serif;
+}
+
+h3, h4, h5, h6, blockquote {
+  font-family: var(--font-cinzel), 'Cinzel', serif;
+}
+
 .tally-loading {
   min-height: 600px;
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
