@@ -40,7 +40,7 @@ export default function Hero({ onOpenContact }: HeroProps) {
           initial={headerAnimation.initial}
           animate={headerAnimation.animate}
           transition={{ ...headerAnimation.transition, delay: 0.2 }}
-          className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6"
+          className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6 headline-gold-effect"
         >
           We Build Systems.
           <br />
