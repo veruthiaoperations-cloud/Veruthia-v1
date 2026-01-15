@@ -132,7 +132,7 @@ export const PROCESS_STEPS = [
     step: 3,
     title: "Build",
     subtitle: "Architecture",
-    description: "Expert development with weekly progress updates and transparent communication.",
+    description: "Expert development with daily progress updates and transparent communication.",
   },
   {
     step: 4,
