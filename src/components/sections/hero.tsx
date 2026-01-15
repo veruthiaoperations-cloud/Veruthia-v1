@@ -27,10 +27,21 @@ export default function Hero({ onOpenContact }: HeroProps) {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.03)_0%,_transparent_70%)]" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+        <motion.h1
+          initial={headerAnimation.initial}
+          animate={headerAnimation.animate}
+          transition={{ ...headerAnimation.transition, delay: 0.1 }}
+          className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6"
+        >
+          <span className="headline-gold-effect">We Build Systems</span>
+          <br />
+          <span className="text-zinc-400">Not Websites</span>
+        </motion.h1>
+
         <motion.div
           initial={bodyAnimation.initial}
           animate={bodyAnimation.animate}
-          transition={{ ...bodyAnimation.transition, delay: 0.1 }}
+          transition={{ ...bodyAnimation.transition, delay: 0.2 }}
           className="mb-4"
         >
           <span className="inline-block px-4 py-2 text-xs uppercase tracking-widest text-[#d4af37] border border-[#d4af37]/30 bg-[#d4af37]/5 rounded-full font-display">
@@ -41,22 +52,11 @@ export default function Hero({ onOpenContact }: HeroProps) {
         <motion.p
           initial={bodyAnimation.initial}
           animate={bodyAnimation.animate}
-          transition={{ ...bodyAnimation.transition, delay: 0.15 }}
+          transition={{ ...bodyAnimation.transition, delay: 0.25 }}
           className="text-gray-400 uppercase tracking-widest text-sm mb-6 font-display"
         >
           Digital Asset Architecture
         </motion.p>
-
-        <motion.h1
-          initial={headerAnimation.initial}
-          animate={headerAnimation.animate}
-          transition={{ ...headerAnimation.transition, delay: 0.2 }}
-          className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6"
-        >
-          <span className="headline-gold-effect">We Build Systems</span>
-          <br />
-          <span className="text-zinc-400">Not Websites</span>
-        </motion.h1>
 
         <motion.p
           initial={bodyAnimation.initial}
