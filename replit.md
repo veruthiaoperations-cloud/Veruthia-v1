@@ -40,13 +40,13 @@ src/
     └── tally.d.ts         # Tally global type declarations
 ```
 
-## Page Flow (Conversion Physics)
-1. Hero ("We Build Systems")
-2. Services ("What We Build")
-3. Portfolio ("The Portfolio Array")
+## Page Flow (Conversion Optimized)
+1. Hero ("We Build Systems" + Section 179 Badge)
+2. Portfolio ("The Portfolio Array") - Proof before Promise
+3. Services ("What We Build") - 4 cards including Unified Architecture
 4. Process ("The Process")
 5. About ("The Commanders")
-6. Pricing ("Investment Tiers")
+6. Pricing ("Investment Tiers" + Unified Infrastructure banner)
 7. Footer
 
 ## Animation System (Heavy-to-Light Physics)
@@ -68,17 +68,17 @@ src/
 - All Care Drain: Cyan to Black + TrendingUp icon
 - Acts Heat & Air: Orange to Black + Zap icon
 
-### Pricing Tiers
-1. **The AI Receptionist** ($3,500) - Usage-Based Retainer
-2. **The Digital Storefront / Recovery** ($5,000) - $150/mo Hosting & Security
-3. **The Business Engine** ($15,000) - Unified Ecosystem (Web + Voice + CRM) (RECOMMENDED)
-4. **The SaaS Core** ($45,000+) - Enterprise Support Agreement
+### Pricing Tiers (Owner-Benefit Language)
+1. **The Digital Storefront** ($5,000) - "You own the keys. Edit via Control Panel."
+2. **The AI Receptionist** ($3,500) - "Scales infinitely. 5 or 500 calls."
+3. **The Business Engine** ($15,000) - "Modular. Add features as you grow." (RECOMMENDED)
+4. **The SaaS Core** ($45,000+) - Enterprise Architecture
 
 ### Technical Features
 - "Capital Asset Architecture" and "Digital Asset Deployment" terminology
 - Asterisk (*) disclaimer links to visible legal text
 - All CTAs standardized to "Start Asset Audit"
-- Tally.so popup for lead capture (Form ID: 3xjo7o)
+- Tally.so popup for lead capture (Form ID: rjBLb5)
 - Gold selection color (#d4af37)
 - Custom 4px scrollbar (zinc theme)
 
@@ -103,13 +103,24 @@ npm run start  # Production server on port 5000
 ```
 
 ## Documentation
+- **docs/PROJECT_MIRROR.md**: Sovereign Reasoning Protocol state mirror
+- **docs/developer_notes/**: Session-based change logs with reasoning audits
 - **ATOMIC_SPEC.md**: 35-point Definition of Done
 - **PRD.md**: Product Requirements with commander bios
 
+## Integrity Rules (Never Violate)
+- NO "Zero No-Shows" (false claim)
+- NO "CMS" (use "Client Control Panel")
+- YES "99.9% Uptime Architecture" (not Guarantee)
+- YES Section 179 messaging with CPA disclaimer
+
 ## Recent Changes
+- 2026-01-15: Sovereign Reasoning Protocol initialized (docs/PROJECT_MIRROR.md)
+- 2026-01-15: Owner-Benefit language applied (CMS → Client Control Panel)
+- 2026-01-15: Unified Infrastructure banner added to pricing
+- 2026-01-15: Section 179 badge added to hero
+- 2026-01-15: Page flow reordered (Portfolio before Services)
+- 2026-01-15: Tally Form ID updated to rjBLb5
 - 2024-12-22: White Glove Overhaul complete - page flow reordered
 - 2024-12-22: Heavy-to-Light physics applied (Headers 0.8s, Body 0.5s)
 - 2024-12-22: Portfolio deep glass gradients with system icons
-- 2024-12-22: Legal text updated (Capital Asset Architecture, Digital Asset Deployment)
-- 2024-12-22: "Unified Ecosystem (Web + Voice + CRM)" added to Metro-Barber & Business Engine
-- 2024-12-22: Typography mix refined (Playfair headers, Cinzel accents, Inter body)
