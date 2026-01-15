@@ -1,0 +1,51 @@
+Overwrite the entire contents of the file at `src/lib/constants.ts` with the following TypeScript code. This directly updates the correct data source with the required portfolio information.
+
+```bash
+cat > src/lib/constants.ts << EOL
+export const PORTFOLIO_ITEMS = [
+  {
+    id: 1,
+    name: "All Care Drain and Leak Detection",
+    description: "Full-stack development and digital asset architecture. Achieved a 4-day completion for the initial build, with subsequent CMS updates taking only 3-4 hours.",
+    imageUrl: "/images/portfolio/all-care.png",
+    liveUrl: "https://www.allcaredrainandleakdetection.com/",
+    tags: ["Web App", "CMS", "Automation"],
+  },
+  {
+    id: 2,
+    name: "Acts Heat and Air",
+    description: "Provided digital infrastructure and web presence for a leading HVAC service provider, focusing on reliability and customer acquisition.",
+    imageUrl: "/images/portfolio/acts.png",
+    liveUrl: "https://actsheatandair.com/",
+    tags: ["Web Development", "Local SEO"],
+  },
+  {
+    id: 3,
+    name: "Hometown Rock and Landscape, LLC",
+    description: "Developed a scalable e-commerce platform and inventory management system for a major landscape materials supplier.",
+    imageUrl: "/images/portfolio/hometown.png",
+    liveUrl: "https://hometownrockandlandscape.com/",
+    tags: ["E-commerce", "Inventory Management"],
+  },
+  {
+    id: 4,
+    name: "SmartHVAC Analytics",
+    description: "AI-driven diagnostics platform for HVAC systems. Developed by Veruthia Consulting, LLC.",
+    imageUrl: "/images/portfolio/smarthvac.png",
+    liveUrl: "https://smarthvacanalytics.com/",
+    tags: ["AI", "SaaS", "Diagnostics"],
+  },
+  {
+    id: 5,
+    name: "Veruthia Systems",
+    description: "Internal operating system and project management dashboard designed for streamlined client service and internal workflows.",
+    imageUrl: "/images/portfolio/veruthia.png",
+    liveUrl: "#",
+    tags: ["Internal Tools", "Productivity"],
+  }
+];
+EOL
+```
+
+**Expected outcome:**
+The file `src/lib/constants.ts` will be overwritten. The live preview of the website should immediately reflect the updated names, descriptions, and live URLs on the portfolio cards.
