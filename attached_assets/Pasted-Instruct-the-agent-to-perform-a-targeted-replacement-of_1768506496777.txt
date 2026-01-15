@@ -1,0 +1,90 @@
+Instruct the agent to perform a targeted replacement of the `PORTFOLIO_ITEMS` constant within `src/lib/constants.ts`. It must use the following array, which restores the "Metro-Barber-OS" entry and ensures all six portfolio items are present with the correct data structure discovered by the agent in the previous step.
+
+```typescript
+I need to perform a targeted update on the file src/lib/constants.ts.
+
+Locate the constant declaration `export const PORTFOLIO_ITEMS = [...]`.
+
+Replace the entire array associated with that constant with the following new array. Do NOT modify any other constants in the file (like DISCLAIMER_TEXT, COMMANDERS, etc.).
+
+This new array restores the "Metro-Barber-OS" project, bringing the total count to six, and uses the exact data structure required by the component.
+
+Here is the new array to use for the replacement:
+[
+  {
+    id: 1,
+    name: "All Care Drain and Leak Detection",
+    description: "Full-stack development and digital asset architecture. Achieved a 4-day completion for the initial build, with subsequent Client Control Panel updates taking only 3-4 hours.",
+    imageUrl: "/images/portfolio/all-care.png",
+    liveUrl: "https://www.allcaredrainandleakdetection.com/",
+    tags: ["Web App", "CMS", "Automation"],
+    stats: { metric: "4-Day", category: "Speed Build" },
+    tag: "Deep Glass",
+    icon: "/icons/rocket.svg",
+    gradient: "from-[#F02FC2] to-[#6094EA]",
+  },
+  {
+    id: 2,
+    name: "Acts Heat and Air",
+    description: "Provided digital infrastructure and web presence for a leading HVAC service provider, focusing on reliability and customer acquisition.",
+    imageUrl: "/images/portfolio/acts.png",
+    liveUrl: "https://actsheatandair.com/",
+    tags: ["Web Development", "Local SEO"],
+    stats: { metric: "Integrated", category: "Financing" },
+    tag: "Service Industry",
+    icon: "/icons/leaf.svg",
+    gradient: "from-[#43e97b] to-[#38f9d7]",
+  },
+  {
+    id: 3,
+    name: "Hometown Rock and Landscape, LLC",
+    description: "Developed a scalable e-commerce platform and inventory management system for a major landscape materials supplier.",
+    imageUrl: "/images/portfolio/hometown.png",
+    liveUrl: "https://hometownrockandlandscape.com/",
+    tags: ["E-commerce", "Inventory Management"],
+    stats: { metric: "30+", category: "Material Calculators" },
+    tag: "E-Commerce",
+    icon: "/icons/cart.svg",
+    gradient: "from-[#f83600] to-[#f9d423]",
+  },
+  {
+    id: 4,
+    name: "SmartHVAC Analytics",
+    description: "AI-driven diagnostics platform for HVAC systems. Developed by Veruthia Consulting, LLC.",
+    imageUrl: "/images/portfolio/smarthvac.png",
+    liveUrl: "https://smarthvacanalytics.com/",
+    tags: ["AI", "SaaS", "Diagnostics"],
+    stats: { metric: "$720,000", category: "Asset Valuation" },
+    tag: "AI & SaaS",
+    icon: "/icons/brain.svg",
+    gradient: "from-[#00c6fb] to-[#005bea]",
+  },
+  {
+    id: 5,
+    name: "Veruthia Systems",
+    description: "Internal operating system and project management dashboard designed for streamlined client service and internal workflows.",
+    imageUrl: "/images/portfolio/veruthia.png",
+    liveUrl: "#",
+    tags: ["Internal Tools", "Productivity"],
+    stats: { metric: "Unified", category: "Command Center" },
+    tag: "Internal OS",
+    icon: "/icons/shield.svg",
+    gradient: "from-[#8BC6EC] to-[#9599E2]",
+  },
+  {
+    id: 6,
+    name: "Metro-Barber-OS",
+    description: "A complete operating system for a multi-location barber franchise, handling appointments, payroll, and inventory.",
+    imageUrl: "/images/portfolio/metro-barber.png",
+    liveUrl: "#",
+    tags: ["SaaS", "Business Logic", "Automation"],
+    stats: { metric: "3-Minute", category: "Payroll" },
+    tag: "Business OS",
+    icon: "/icons/tool.svg",
+    gradient: "from-[#636363] to-[#a2ab58]",
+  }
+]
+```
+
+**Expected outcome:**
+The website's portfolio section should now display a full grid of six project cards. The "Metro-Barber-OS" card will be restored, and all other projects will retain their updated information. The agent may also report that it updated the `gradientMap` again to accommodate the restored project.

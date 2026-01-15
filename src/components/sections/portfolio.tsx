@@ -15,10 +15,11 @@ const iconMap: Record<string, React.ReactNode> = {
 
 const gradientMap: Record<string, string> = {
   "SmartHVAC Analytics": "bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/40 via-black to-black",
-  "Veruthia Systems": "bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-900/40 via-black to-black",
+  "Veruthia Systems": "bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-900/40 via-black to-black",
   "Hometown Rock and Landscape, LLC": "bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-900/40 via-black to-black",
   "All Care Drain and Leak Detection": "bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-900/40 via-black to-black",
   "Acts Heat and Air": "bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-900/40 via-black to-black",
+  "Metro-Barber-OS": "bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-900/40 via-black to-black",
 };
 
 const headerAnimation = {
