@@ -117,10 +117,7 @@ button, a {
   }
 }
 
-.headline-gold {
-  color: transparent;
-  -webkit-text-stroke: 1px #D4AF37;
-  text-stroke: 1px #D4AF37;
-  animation: gold-glow 4s infinite ease-in-out;
-  font-weight: 900;
+.header-logo {
+  height: 56px !important;
+  width: auto !important;
 }

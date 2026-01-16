@@ -44,7 +44,7 @@ export default function Navbar() {
               <img 
                 src="/assets/logo.png" 
                 alt="Veruthia Consulting" 
-                className="h-12 w-auto object-contain"
+                className="header-logo"
               />
             </Link>
 
