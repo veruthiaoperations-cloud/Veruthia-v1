@@ -50,7 +50,7 @@ export default function Portfolio() {
         <div className="text-center mb-12">
           <motion.h2
             {...headerAnimation}
-            className="font-serif text-4xl md:text-5xl font-bold mb-4"
+            className="font-serif text-4xl md:text-5xl font-bold mb-4 headline-gold"
           >
             The Portfolio Array
           </motion.h2>
