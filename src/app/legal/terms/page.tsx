@@ -4,6 +4,11 @@ export default function TermsPage() {
   return (
     <div className="min-h-screen bg-[#050505] pt-24 pb-16">
       <div className="max-w-3xl mx-auto px-6">
+        <img 
+          src="/assets/veruthia-llc-logo.png" 
+          alt="Veruthia Consulting, LLC Logo" 
+          className="footer-logo mb-8" 
+        />
         <h1 className="font-playfair text-4xl font-bold mb-8">
           Terms of Service
         </h1>
