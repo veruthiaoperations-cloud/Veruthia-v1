@@ -1,17 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Lock, Code, BarChart3, TrendingUp, Zap } from "lucide-react";
 import { PORTFOLIO_ITEMS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-
-const iconMap: Record<string, React.ReactNode> = {
-  Lock: <Lock className="w-12 h-12" />,
-  Code: <Code className="w-12 h-12" />,
-  BarChart3: <BarChart3 className="w-12 h-12" />,
-  TrendingUp: <TrendingUp className="w-12 h-12" />,
-  Zap: <Zap className="w-12 h-12" />,
-};
 
 const gradientMap: Record<string, string> = {
   "SmartHVAC Analytics": "bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-900/40 via-black to-black",
@@ -88,9 +79,6 @@ export default function Portfolio() {
                 gradientMap[item.name] || item.gradient
               )}
             >
-              <div className="absolute top-6 right-6 text-white/10">
-                {iconMap[item.icon]}
-              </div>
               <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/95 via-[#050505]/60 to-transparent" />
               <div className="relative z-10">
                 <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs uppercase tracking-wide text-gray-300 mb-3 font-display">
