@@ -133,6 +133,6 @@ button, a {
   font-family: 'Cinzel', serif;
   font-size: 1.125rem; /* 18px */
   font-weight: 400;
-  margin-left: 2px;
+  margin-left: -1px;
   letter-spacing: 0.05em;
 }
