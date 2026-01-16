@@ -78,14 +78,14 @@ export default function Portfolio() {
                 variants={itemVariants}
                 whileHover={{ scale: 1.02, boxShadow: "0 0 30px rgba(212, 175, 55, 0.1)" }}
                 className={cn(
-                  "relative overflow-hidden rounded-xl p-8 min-h-[320px] flex flex-col justify-end border border-white/10 backdrop-blur-md",
+                  "relative overflow-hidden rounded-xl p-8 h-full min-h-[320px] flex flex-col border border-white/10 backdrop-blur-md",
                   gradientMap[item.name] || item.gradient,
                   isClickable && "cursor-pointer"
                 )}
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/95 via-[#050505]/60 to-transparent" />
-                <div className="relative z-10">
-                  <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs uppercase tracking-wide text-gray-300 mb-3 font-display">
+                <div className="relative z-10 flex flex-col flex-grow justify-end">
+                  <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs uppercase tracking-wide text-gray-300 mb-3 font-display w-fit">
                     {item.tag}
                   </span>
                   <h3 className="font-serif text-2xl md:text-3xl font-bold mb-2">
@@ -96,12 +96,14 @@ export default function Portfolio() {
                     <p className="text-3xl font-bold">{item.stats.metric}</p>
                     <p className="text-sm text-gray-400 font-sans">{item.stats.label}</p>
                   </div>
-                  {isClickable && (
-                    <div className="mt-4 flex items-center font-display text-sm font-bold text-[#d4af37]">
-                      <span>View Live Site</span>
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </div>
-                  )}
+                  <div className="h-10 mt-4">
+                    {isClickable && (
+                      <div className="flex items-center font-display text-sm font-bold text-[#d4af37]">
+                        <span>View Live Site</span>
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </div>
+                    )}
+                  </div>
                 </div>
               </motion.div>
             );
