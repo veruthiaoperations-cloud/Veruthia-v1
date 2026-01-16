@@ -29,7 +29,7 @@ export const PORTFOLIO_ITEMS = [
   {
     id: "all-care-drain",
     name: "All Care Drain and Leak Detection",
-    tag: "Web App",
+    tag: "Control Panel Website",
     description: "Full-stack development and digital asset architecture. Achieved a 4-day completion for the initial build, with subsequent Client Control Panel updates taking only 3-4 hours.",
     gradient: "bg-gradient-to-br from-cyan-950 via-teal-950 to-[#050505]",
     stats: { metric: "4-Day", label: "Speed Build" },
