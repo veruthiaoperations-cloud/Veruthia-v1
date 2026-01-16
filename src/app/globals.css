@@ -136,3 +136,10 @@ button, a {
   margin-left: -1px;
   letter-spacing: 0.05em;
 }
+
+.footer-logo {
+  max-width: 240px;
+  height: auto;
+  opacity: 0.75;
+  margin-top: 8px;
+}
