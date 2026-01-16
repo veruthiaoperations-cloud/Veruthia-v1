@@ -78,7 +78,7 @@ export default function Portfolio() {
                 variants={itemVariants}
                 whileHover={{ scale: 1.02, boxShadow: "0 0 30px rgba(212, 175, 55, 0.1)" }}
                 className={cn(
-                  "relative overflow-hidden rounded-xl p-8 h-full min-h-[420px] flex flex-col justify-end border border-white/10 backdrop-blur-md",
+                  "relative overflow-hidden rounded-xl p-8 h-full min-h-[440px] flex flex-col justify-end border border-white/10 backdrop-blur-md",
                   gradientMap[item.name] || item.gradient,
                   isClickable && "cursor-pointer"
                 )}
@@ -92,7 +92,7 @@ export default function Portfolio() {
                     </span>
                   </div>
                   {/* Title Zone - Fixed height for up to 2 lines */}
-                  <div className="h-[72px] mb-3">
+                  <div className="h-[84px] mb-4 overflow-hidden">
                     <h3 className="font-serif text-2xl md:text-3xl font-bold leading-tight">
                       {item.name}
                     </h3>
