@@ -84,25 +84,29 @@ export default function Portfolio() {
                 )}
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/95 via-[#050505]/60 to-transparent" />
-                <div className="relative z-10 flex flex-col flex-grow justify-end">
-                  <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs uppercase tracking-wide text-gray-300 mb-3 font-display w-fit">
-                    {item.tag}
-                  </span>
-                  <h3 className="font-serif text-2xl md:text-3xl font-bold mb-2">
-                    {item.name}
-                  </h3>
-                  <p className="text-gray-300 text-sm mb-4 font-sans">{item.description}</p>
-                  <div className="flex items-baseline gap-2">
-                    <p className="text-3xl font-bold">{item.stats.metric}</p>
-                    <p className="text-sm text-gray-400 font-sans">{item.stats.label}</p>
+                <div className="relative z-10 flex flex-col flex-grow">
+                  <div className="h-8 mb-3">
+                    <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs uppercase tracking-wide text-gray-300 font-display w-fit">
+                      {item.tag}
+                    </span>
                   </div>
-                  <div className="h-10 mt-4">
-                    {isClickable && (
-                      <div className="flex items-center font-display text-sm font-bold text-[#d4af37]">
-                        <span>View Live Site</span>
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </div>
-                    )}
+                  <div className="flex-grow flex flex-col justify-end">
+                    <h3 className="font-serif text-2xl md:text-3xl font-bold mb-2">
+                      {item.name}
+                    </h3>
+                    <p className="text-gray-300 text-sm mb-4 font-sans">{item.description}</p>
+                    <div className="flex items-baseline gap-2">
+                      <p className="text-3xl font-bold">{item.stats.metric}</p>
+                      <p className="text-sm text-gray-400 font-sans">{item.stats.label}</p>
+                    </div>
+                    <div className="h-10 mt-4">
+                      {isClickable && (
+                        <div className="flex items-center font-display text-sm font-bold text-[#d4af37]">
+                          <span>View Live Site</span>
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
               </motion.div>
