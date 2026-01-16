@@ -70,38 +70,55 @@ export default function Portfolio() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {PORTFOLIO_ITEMS.map((item) => (
-            <motion.div
-              key={item.id}
-              variants={itemVariants}
-              whileHover={{ scale: 1.02, boxShadow: "0 0 30px rgba(212, 175, 55, 0.1)" }}
-              className={cn(
-                "relative overflow-hidden rounded-xl p-8 min-h-[320px] flex flex-col justify-end border border-white/10 backdrop-blur-md",
-                gradientMap[item.name] || item.gradient
-              )}
-            >
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/95 via-[#050505]/60 to-transparent" />
-              <div className="relative z-10">
-                <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs uppercase tracking-wide text-gray-300 mb-3 font-display">
-                  {item.tag}
-                </span>
-                <h3 className="font-serif text-2xl md:text-3xl font-bold mb-2">
-                  {item.name}
-                </h3>
-                <p className="text-gray-300 text-sm mb-4 font-sans">{item.description}</p>
-                <div className="flex items-baseline gap-2">
-                  <p className="text-3xl font-bold">{item.stats.metric}</p>
-                  <p className="text-sm text-gray-400 font-sans">{item.stats.label}</p>
-                </div>
-                {item.liveUrl && item.liveUrl !== '#' && (
-                  <div className="mt-4 flex items-center font-display text-sm font-bold text-[#d4af37]">
-                    <span>View Live Site</span>
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </div>
+          {PORTFOLIO_ITEMS.map((item) => {
+            const isClickable = item.liveUrl && item.liveUrl !== '#';
+            const cardContent = (
+              <motion.div
+                key={item.id}
+                variants={itemVariants}
+                whileHover={{ scale: 1.02, boxShadow: "0 0 30px rgba(212, 175, 55, 0.1)" }}
+                className={cn(
+                  "relative overflow-hidden rounded-xl p-8 min-h-[320px] flex flex-col justify-end border border-white/10 backdrop-blur-md",
+                  gradientMap[item.name] || item.gradient,
+                  isClickable && "cursor-pointer"
                 )}
-              </div>
-            </motion.div>
-          ))}
+              >
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/95 via-[#050505]/60 to-transparent" />
+                <div className="relative z-10">
+                  <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs uppercase tracking-wide text-gray-300 mb-3 font-display">
+                    {item.tag}
+                  </span>
+                  <h3 className="font-serif text-2xl md:text-3xl font-bold mb-2">
+                    {item.name}
+                  </h3>
+                  <p className="text-gray-300 text-sm mb-4 font-sans">{item.description}</p>
+                  <div className="flex items-baseline gap-2">
+                    <p className="text-3xl font-bold">{item.stats.metric}</p>
+                    <p className="text-sm text-gray-400 font-sans">{item.stats.label}</p>
+                  </div>
+                  {isClickable && (
+                    <div className="mt-4 flex items-center font-display text-sm font-bold text-[#d4af37]">
+                      <span>View Live Site</span>
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </div>
+                  )}
+                </div>
+              </motion.div>
+            );
+
+            return isClickable ? (
+              <a
+                key={item.id}
+                href={item.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {cardContent}
+              </a>
+            ) : (
+              cardContent
+            );
+          })}
         </motion.div>
       </div>
     </section>
