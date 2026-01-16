@@ -46,9 +46,9 @@ export default function Pricing({ onOpenContact }: PricingProps) {
         <div className="text-center mb-12">
           <motion.h2
             {...headerAnimation}
-            className="font-serif text-4xl md:text-5xl font-bold mb-4"
+            className="font-serif text-5xl md:text-7xl font-bold leading-tight mb-6"
           >
-            Investment Tiers
+            <span className="headline-gold-effect">Investment Tiers</span>
           </motion.h2>
           <motion.p
             {...bodyAnimation}
