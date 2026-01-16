@@ -93,10 +93,12 @@ export default function Portfolio() {
                   <p className="text-3xl font-bold">{item.stats.metric}</p>
                   <p className="text-sm text-gray-400 font-sans">{item.stats.label}</p>
                 </div>
-                <div className="mt-4 flex items-center font-display text-sm font-bold text-[#d4af37]">
-                  <span>View Live Site</span>
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </div>
+                {item.liveUrl && item.liveUrl !== '#' && (
+                  <div className="mt-4 flex items-center font-display text-sm font-bold text-[#d4af37]">
+                    <span>View Live Site</span>
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
