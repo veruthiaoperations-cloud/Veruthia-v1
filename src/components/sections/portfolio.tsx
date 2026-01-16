@@ -90,11 +90,13 @@ export default function Portfolio() {
                       {item.tag}
                     </span>
                   </div>
-                  <div className="flex-grow flex flex-col justify-end">
-                    <h3 className="font-serif text-2xl md:text-3xl font-bold mb-2">
+                  <div className="h-20 mb-2">
+                    <h3 className="font-serif text-2xl md:text-3xl font-bold leading-tight">
                       {item.name}
                     </h3>
-                    <p className="text-gray-300 text-sm mb-4 font-sans">{item.description}</p>
+                  </div>
+                  <div className="flex-grow flex flex-col justify-end">
+                    <p className="text-gray-300 text-sm mb-4 font-sans line-clamp-2">{item.description}</p>
                     <div className="flex items-baseline gap-2">
                       <p className="text-3xl font-bold">{item.stats.metric}</p>
                       <p className="text-sm text-gray-400 font-sans">{item.stats.label}</p>
