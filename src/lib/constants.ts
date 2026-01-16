@@ -34,7 +34,7 @@ export const PORTFOLIO_ITEMS = [
     gradient: "bg-gradient-to-br from-cyan-950 via-teal-950 to-[#050505]",
     stats: { metric: "4-Day", label: "Speed Build" },
     icon: "TrendingUp",
-    liveUrl: "https://allcaredrain.com",
+    liveUrl: "https://www.allcaredrainandleakdetection.com/",
   },
   {
     id: "acts-heat-air",
@@ -54,7 +54,7 @@ export const PORTFOLIO_ITEMS = [
     gradient: "bg-gradient-to-br from-emerald-950 via-green-950 to-[#050505]",
     stats: { metric: "30+", label: "Material Calculators" },
     icon: "BarChart3",
-    liveUrl: "https://hometownrock.com",
+    liveUrl: "https://hometownrockandlandscape.com/",
   },
   {
     id: "smarthvac",
@@ -64,7 +64,7 @@ export const PORTFOLIO_ITEMS = [
     gradient: "bg-gradient-to-br from-blue-950 via-slate-950 to-[#050505]",
     stats: { metric: "$720,000", label: "Asset Valuation" },
     icon: "Lock",
-    liveUrl: "https://smarthvac.com",
+    liveUrl: "https://smarthvacanalytics.com/",
   },
   {
     id: "veruthia-systems",
