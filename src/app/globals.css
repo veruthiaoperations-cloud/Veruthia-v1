@@ -107,3 +107,19 @@ button, a {
   -webkit-text-stroke: 0.5px #D4AF37;
   text-stroke: 0.5px #D4AF37;
 }
+
+@keyframes gold-glow {
+  0%, 100% {
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
+  }
+  50% {
+    text-shadow: 0 0 16px rgba(212, 175, 55, 0.8);
+  }
+}
+
+.headline-gold {
+  color: transparent;
+  -webkit-text-stroke: 1px #D4AF37;
+  text-stroke: 1px #D4AF37;
+  animation: gold-glow 4s infinite ease-in-out;
+}
