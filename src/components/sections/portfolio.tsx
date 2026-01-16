@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import { PORTFOLIO_ITEMS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
@@ -91,6 +92,10 @@ export default function Portfolio() {
                 <div className="flex items-baseline gap-2">
                   <p className="text-3xl font-bold">{item.stats.metric}</p>
                   <p className="text-sm text-gray-400 font-sans">{item.stats.label}</p>
+                </div>
+                <div className="mt-4 flex items-center font-display text-sm font-bold text-[#d4af37]">
+                  <span>View Live Site</span>
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </div>
               </div>
             </motion.div>
