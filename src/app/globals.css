@@ -124,7 +124,7 @@ button, a {
 
 .logo-v {
   font-family: 'Playfair Display', serif;
-  font-size: 2.25rem; /* 36px */
+  font-size: 1.875rem; /* 30px */
   font-weight: 700;
   line-height: 1;
 }
@@ -133,6 +133,6 @@ button, a {
   font-family: 'Cinzel', serif;
   font-size: 1.125rem; /* 18px */
   font-weight: 400;
-  margin-left: 4px;
+  margin-left: 2px;
   letter-spacing: 0.05em;
 }

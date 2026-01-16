@@ -40,7 +40,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center group">
+            <Link href="/" className="flex items-baseline group">
               <span className="logo-v">V</span>
               <span className="logo-eruthia">eruthia Consulting</span>
             </Link>
