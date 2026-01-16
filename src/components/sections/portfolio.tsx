@@ -78,37 +78,42 @@ export default function Portfolio() {
                 variants={itemVariants}
                 whileHover={{ scale: 1.02, boxShadow: "0 0 30px rgba(212, 175, 55, 0.1)" }}
                 className={cn(
-                  "relative overflow-hidden rounded-xl p-8 h-full min-h-[320px] flex flex-col border border-white/10 backdrop-blur-md",
+                  "relative overflow-hidden rounded-xl p-8 h-full min-h-[420px] flex flex-col justify-end border border-white/10 backdrop-blur-md",
                   gradientMap[item.name] || item.gradient,
                   isClickable && "cursor-pointer"
                 )}
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/95 via-[#050505]/60 to-transparent" />
-                <div className="relative z-10 flex flex-col flex-grow">
-                  <div className="h-8 mb-3">
-                    <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs uppercase tracking-wide text-gray-300 font-display w-fit">
+                <div className="relative z-10 flex flex-col h-full">
+                  {/* Tag Zone - Fixed height */}
+                  <div className="h-8 mb-3 flex items-start">
+                    <span className="inline-block px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs uppercase tracking-wide text-gray-300 font-display">
                       {item.tag}
                     </span>
                   </div>
-                  <div className="h-20 mb-2">
+                  {/* Title Zone - Fixed height for up to 2 lines */}
+                  <div className="h-[72px] mb-3">
                     <h3 className="font-serif text-2xl md:text-3xl font-bold leading-tight">
                       {item.name}
                     </h3>
                   </div>
-                  <div className="flex-grow flex flex-col justify-end">
-                    <p className="text-gray-300 text-sm mb-4 font-sans line-clamp-2">{item.description}</p>
-                    <div className="flex items-baseline gap-2">
-                      <p className="text-3xl font-bold">{item.stats.metric}</p>
-                      <p className="text-sm text-gray-400 font-sans">{item.stats.label}</p>
-                    </div>
-                    <div className="h-10 mt-4">
-                      {isClickable && (
-                        <div className="flex items-center font-display text-sm font-bold text-[#d4af37]">
-                          <span>View Live Site</span>
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </div>
-                      )}
-                    </div>
+                  {/* Description Zone - Fixed height for up to 5 lines */}
+                  <div className="h-[110px] mb-4">
+                    <p className="text-gray-300 text-sm font-sans leading-relaxed">{item.description}</p>
+                  </div>
+                  {/* Stats Zone - Fixed height */}
+                  <div className="h-12 flex items-baseline gap-2">
+                    <p className="text-3xl font-bold">{item.stats.metric}</p>
+                    <p className="text-sm text-gray-400 font-sans">{item.stats.label}</p>
+                  </div>
+                  {/* CTA Zone - Fixed height */}
+                  <div className="h-10 mt-4 flex items-center">
+                    {isClickable && (
+                      <div className="flex items-center font-display text-sm font-bold text-[#d4af37]">
+                        <span>View Live Site</span>
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </div>
+                    )}
                   </div>
                 </div>
               </motion.div>
