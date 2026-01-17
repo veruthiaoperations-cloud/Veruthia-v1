@@ -68,7 +68,7 @@ export default function Portfolio() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8"
         >
           {PORTFOLIO_ITEMS.map((item) => {
             const isClickable = item.liveUrl && item.liveUrl !== '#';
@@ -78,7 +78,7 @@ export default function Portfolio() {
                 variants={itemVariants}
                 whileHover={{ scale: 1.02, boxShadow: "0 0 30px rgba(212, 175, 55, 0.1)" }}
                 className={cn(
-                  "relative overflow-hidden rounded-xl p-8 h-full min-h-[460px] flex flex-col justify-end border border-white/10 backdrop-blur-md",
+                  "relative overflow-hidden rounded-xl p-8 h-full min-h-[380px] flex flex-col justify-end border border-white/10 backdrop-blur-md",
                   gradientMap[item.name] || item.gradient,
                   isClickable && "cursor-pointer"
                 )}
@@ -92,13 +92,13 @@ export default function Portfolio() {
                     </span>
                   </div>
                   {/* Title Zone - Fixed height for up to 2 lines */}
-                  <div className="h-[100px] mb-4">
+                  <div className="h-[72px] mb-4">
                     <h3 className="font-serif text-2xl md:text-3xl font-bold leading-tight">
                       {item.name}
                     </h3>
                   </div>
-                  {/* Description Zone - Fixed height for up to 5 lines */}
-                  <div className="h-[110px] mb-4">
+                  {/* Description Zone - Fixed height for descriptions */}
+                  <div className="h-[100px] mb-4">
                     <p className="text-gray-300 text-sm font-sans leading-relaxed">{item.description}</p>
                   </div>
                   {/* Stats Zone - Fixed height */}
