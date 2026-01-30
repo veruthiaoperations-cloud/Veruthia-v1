@@ -2,7 +2,7 @@ export const DISCLAIMER_TEXT =
   "CAPITAL ASSET ADVISORY: This system is architected as a depreciable software asset. Under Section 179, qualified businesses may deduct the full purchase price from gross income. Invest in your growth, not in taxes.*";
 
 export const DISCLAIMER_FOOTNOTE =
-  "* Veruthia Consulting, LLC provides software architecture, not tax advice. Consult a Certified Public Accountant (CPA).";
+  "* Platform-based solutions include full configuration transfer and data ownership. Custom codebase projects include full IP transfer. Consult your CPA for Section 179 eligibility.";
 
 export const PRIVACY_TEXT =
   "We collect name, email, and revenue data solely for the purpose of the Capital Asset Architecture review.";

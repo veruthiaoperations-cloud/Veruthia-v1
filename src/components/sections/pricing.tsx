@@ -108,7 +108,7 @@ export default function Pricing({ onOpenContact }: PricingProps) {
                 {tier.retainer}
               </p>
 
-              <ul className="space-y-2 mb-6 flex-1">
+              <ul className="space-y-2 mb-4 flex-1">
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-2">
                     <Check className="w-4 h-4 mt-0.5 flex-shrink-0 text-emerald-400" />
@@ -118,6 +118,11 @@ export default function Pricing({ onOpenContact }: PricingProps) {
                   </li>
                 ))}
               </ul>
+              {tier.name === "The Business Engine" && (
+                <p className="text-xs text-zinc-500 italic mb-4 font-sans">
+                  *For custom codebase projects only. Platform-based solutions include configuration transfer.
+                </p>
+              )}
 
               <Button
                 onClick={onOpenContact}
